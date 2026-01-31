@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10% Content | Daily Posts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        :root {
+            --bg: #fafafa;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --border: #e0e0e0;
+            --accent: #1a1a1a;
+            --card-bg: #ffffff;
+            --pending: #fff8e1;
+            --published: #e8f5e9;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .header h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .header-meta {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        .stats-bar {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
+        }
+        
+        .stat {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+        }
+        
+        .stat strong {
+            color: var(--text);
+            font-size: 1rem;
+            display: block;
+        }
+        
+        /* Thread info */
+        .thread-info {
+            background: var(--card-bg);
+            margin: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .thread-info h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .thread-info p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        /* Posts */
+        .posts-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 1rem 2rem;
+        }
+        
+        .post-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        
+        .post-header {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .post-number {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-light);
+        }
+        
+        .post-status {
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .status-pending { background: var(--pending); color: #856404; }
+        .status-published { background: var(--published); color: #2e7d32; }
+        
+        .post-content {
+            padding: 1rem;
+        }
+        
+        .hook {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .body-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        
+        .hashtags {
+            font-size: 0.875rem;
+            color: #0066cc;
+            margin-bottom: 1rem;
+        }
+        
+        /* Actions */
+        .post-actions {
+            padding: 1rem;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            margin-bottom: 0.75rem;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        
+        .linkedin-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Engagement form */
+        .engagement-section {
+            padding: 1rem;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+        
+        .engagement-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+        
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+        
+        .engagement-field label {
+            display: block;
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+        
+        .engagement-field input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.875rem;
+        }
+        
+        .performance-badge {
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .performance-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        
+        .performance-score {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .score-high { color: #2e7d32; }
+        .score-med { color: #f57c00; }
+        .score-low { color: #c62828; }
+        
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-light);
+        }
+        
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--text);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>10% Content</h1>
+            <p class="header-meta">Daily LinkedIn Posts</p>
+            <div class="stats-bar">
+                <div class="stat">
+                    <strong id="pending-count">--</strong>
+                    Pending
+                </div>
+                <div class="stat">
+                    <strong id="published-count">--</strong>
+                    Published
+                </div>
+                <div class="stat">
+                    <strong id="total-count">--</strong>
+                    Total
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="loading">Loading posts...</div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        async function loadPosts() {
+            try {
+                const response = await fetch('./content/2026-01-31_posts.yaml') || await fetch('content/2026-01-31_posts.yaml');
+                const yamlText = await response.text();
+                const data = jsyaml.load(yamlText);
+                renderDashboard(data);
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('content').innerHTML = 
+                    `<div class="loading">Error loading posts. Please refresh.</div>`;
+            }
+        }
+
+        function renderDashboard(data) {
+            const container = document.getElementById('content');
+            
+            // Update stats
+            const pending = data.posts.filter(p => !p.linkedin_url).length;
+            const published = data.posts.filter(p => p.linkedin_url).length;
+            
+            document.getElementById('pending-count').textContent = pending;
+            document.getElementById('published-count').textContent = published;
+            document.getElementById('total-count').textContent = data.posts.length;
+            
+            let html = `
+                <div class="thread-info">
+                    <h2>${data.theme}</h2>
+                    <p>${data.tone} tone • ${data.funnel_stage} of funnel</p>
+                </div>
+                <div class="posts-container">
+            `;
+
+            data.posts.forEach((post, index) => {
+                const isPublished = post.linkedin_url;
+                const statusClass = isPublished ? 'status-published' : 'status-pending';
+                const statusText = isPublished ? 'Published' : 'Pending';
+                
+                html += `
+                    <div class="post-card" id="post-${post.id}">
+                        <div class="post-header">
+                            <span class="post-number">${String(index + 1).padStart(2, '0')}</span>
+                            <span class="post-status ${statusClass}">${statusText}</span>
+                        </div>
+                        
+                        <div class="post-content">
+                            <div class="hook">${post.hook}</div>
+                            <div class="body-text">${post.body}</div>
+                            <div class="hashtags">${post.hashtags.join(' ')}</div>
+                        </div>
+                        
+                        <div class="post-actions">
+                            <button class="btn" onclick="copyPost('${post.id}')">
+                                Copy Post
+                            </button>
+                            
+                            <input type="text" 
+                                   class="linkedin-input" 
+                                   placeholder="Paste LinkedIn URL after posting..."
+                                   value="${post.linkedin_url || ''}"
+                                   onchange="saveUrl('${post.id}', this.value)">
+                        </div>
+                        
+                        ${isPublished ? `
+                        <div class="engagement-section">
+                            <div class="engagement-title">Engagement Stats</div>
+                            <div class="engagement-grid">
+                                <div class="engagement-field">
+                                    <label>Impressions</label>
+                                    <input type="number" value="${post.stats?.impressions || ''}" 
+                                           onchange="saveStat('${post.id}', 'impressions', this.value)">
+                                </div>
+                                <div class="engagement-field">
+                                    <label>Likes</label>
+                                    <input type="number" value="${post.stats?.likes || ''}"
+                                           onchange="saveStat('${post.id}', 'likes', this.value)">
+                                </div>
+                                <div class="engagement-field">
+                                    <label>Comments</label>
+                                    <input type="number" value="${post.stats?.comments || ''}"
+                                           onchange="saveStat('${post.id}', 'comments', this.value)">
+                                </div>
+                                <div class="engagement-field">
+                                    <label>Shares</label>
+                                    <input type="number" value="${post.stats?.shares || ''}"
+                                           onchange="saveStat('${post.id}', 'shares', this.value)">
+                                </div>
+                            </div>
+                            <div class="performance-badge">
+                                <span class="performance-label">Performance</span>
+                                <span class="performance-score ${getScoreClass(post.stats)}">
+                                    ${calculateScore(post.stats)}
+                                </span>
+                            </div>
+                        </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function copyPost(postId) {
+            fetch('./content/2026-01-31_posts.yaml')
+                .then(r => r.text())
+                .then(text => {
+                    const data = jsyaml.load(text);
+                    const post = data.posts.find(p => p.id === postId);
+                    if (post) {
+                        const fullText = `${post.hook}\n\n${post.body}\n\n${post.hashtags.join(' ')}`;
+                        navigator.clipboard.writeText(fullText);
+                        showToast('Copied to clipboard!');
+                    }
+                });
+        }
+
+        function saveUrl(postId, url) {
+            console.log('Save URL:', postId, url);
+            showToast('URL saved');
+            // In production: save back to YAML
+        }
+
+        function saveStat(postId, metric, value) {
+            console.log('Save stat:', postId, metric, value);
+            showToast(`${metric} saved`);
+            // In production: save back to YAML
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        function calculateScore(stats) {
+            if (!stats || !stats.impressions) return 'N/A';
+            const likes = stats.likes || 0;
+            const comments = stats.comments || 0;
+            const shares = stats.shares || 0;
+            const rate = ((likes + comments * 2 + shares * 3) / stats.impressions * 100).toFixed(1);
+            return rate + '%';
+        }
+
+        function getScoreClass(stats) {
+            if (!stats || !stats.impressions) return '';
+            const rate = parseFloat(calculateScore(stats));
+            if (rate > 5) return 'score-high';
+            if (rate > 2) return 'score-med';
+            return 'score-low';
+        }
+
+        loadPosts();
+    </script>
+</body>
+</html>
