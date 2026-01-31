@@ -1,0 +1,312 @@
+theme: "The Permission to Rest"
+golden_thread:
+  narrative_arc: "From recognizing exhaustion to claiming rest as productive"
+  open_questions:
+    - "What would you notice about your life from 100 feet away?"
+    - "When's the last time you heard a sound you didn't need to identify?"
+    - "What's your 10% today?"
+
+tone_profile:
+  conversational: 85
+  confrontational: 15
+  poetic: 40
+  actionable: 60
+
+posts:
+  - id: "post_01"
+    position: 1
+    angle: "problem_identification"
+    hook: "You know that tired feeling that sleep doesn't fix?"
+    body: |
+      You get 8 hours. Maybe 9 on weekends.
+
+      But there's this background hum that never quite goes away.
+
+      It's not your fault.
+
+      Your nervous system was designed for environments where stillness was the default, not the exception.
+
+      Now? Your brain processes 34 gigabytes of information daily.
+
+      What's the last thing you heard that wasn't man-made?
+    hashtags: ["#Rest", "#Burnout", "#NatureDeficit"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_02"
+    position: 2
+    angle: "generational_contrast"
+    hook: "Your ancestors would be confused by your weekends."
+    body: |
+      Not judgmental. Just... confused.
+
+      They spent 200,000 years figuring out:
+      - Which plants heal
+      - Which birds mean rain
+      - Which silence means safety
+
+      And now?
+
+      We spend Saturdays recovering from the week.
+      Sundays dreading the next one.
+
+      The weird part: we call this "balance."
+
+      What do you do on weekends that actually fills you back up?
+    hashtags: ["#Weekend", "#Nature", "#SlowLiving"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_03"
+    position: 3
+    angle: "digital_habit_disruption"
+    hook: "The average person checks their phone 96 times a day."
+    body: |
+      That's once every 10 minutes of being awake.
+
+      Here's what I noticed:
+
+      When I spend a weekend somewhere without signal, that number drops to about 6.
+
+      Not because I'm disciplined.
+      Because the option literally doesn't exist.
+
+      That's the trick, isn't it?
+
+      We don't need more willpower.
+      We need different environments.
+
+      When's the last time you were somewhere you *couldn't* check your phone?
+    hashtags: ["#DigitalWellness", "#Unplug", "#NatureTherapy"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_04"
+    position: 4
+    angle: "reframe_retreat"
+    hook: "I've been thinking about the word 'retreat.'"
+    body: |
+      We use it for:
+      - Corporate offsites
+      - Wellness weekends
+      - Emergency military maneuvers
+
+      Same word.
+      Very different meanings.
+
+      But they all share something:
+
+      Stepping back to see the whole board.
+
+      The question is: what are we stepping back *from*?
+
+      If you can't name it, you might be too close to see it.
+
+      What's one thing you'd notice about your life if you watched it from 100 feet away?
+    hashtags: ["#Perspective", "#Retreat", "#Mindfulness"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_05"
+    position: 5
+    angle: "define_10_percent"
+    hook: "Someone asked me why we call it '10%.'"
+    body: |
+      Not 50%.
+      Not all-in.
+      Just 10%.
+
+      Because that's the difference between:
+      - Ordering takeout vs. growing tomatoes on your balcony
+      - Netflix binge vs. walking after dinner
+      - Dreaming about change vs. one small habit
+
+      10% isn't a compromise.
+      It's an entry point.
+
+      You don't need to move to a forest.
+      You need to remember forests exist.
+
+      What's your 10% today?
+    hashtags: ["#10Percent", "#SmallChanges", "#Nature"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_06"
+    position: 6
+    angle: "sensory_restoration"
+    hook: "There's a sound you can't hear in cities."
+    body: |
+      Not silence.
+
+      The opposite: *enough* sound.
+
+      Birds layering on birds.
+      Wind through different trees (each makes its own note).
+      Water doing whatever water decides.
+
+      Your brain knows what to do with this.
+
+      It was built for it.
+
+      In the city, your auditory cortex stays partially activated, waiting for the next alert, siren, notification.
+
+      In the wild, it finally gets to do its actual job: listening without vigilance.
+
+      When's the last time you heard a sound you didn't need to identify?
+    hashtags: ["#NatureSounds", "#SensoryRest", "#Wilderness"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_07"
+    position: 7
+    angle: "forest_bathing_science"
+    hook: "The Japanese have a word: 'Shinrin-yoku.'"
+    body: |
+      Forest bathing.
+
+      Not hiking.
+      Not exercising.
+      Just... being there.
+
+      Studies show it lowers cortisol, blood pressure, and heart rate.
+
+      But you don't need studies.
+
+      You remember how you felt the last time you stood somewhere green and just... breathed.
+
+      We don't lack evidence.
+      We lack permission to slow down.
+
+      So here: permission granted.
+
+      What's the closest patch of green to where you are right now?
+    hashtags: ["#ForestBathing", "#ShinrinYoku", "#Wellness"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_08"
+    position: 8
+    angle: "burnout_reframe"
+    hook: "I used to think 'burnout' meant working too hard."
+    body: |
+      Now I think it means:
+
+      Working in ways that don't fit how humans work.
+
+      We evolved for:
+      - Task → rest → task → rest
+      - Clear boundaries between work and not-work
+      - Seasons of intensity and seasons of recovery
+
+      We built systems that demand:
+      - Constant availability
+      - Simultaneous everything
+      - Infinite linear growth
+
+      No wonder we're tired.
+
+      The fix isn't a vacation.
+      It's different architecture.
+
+      What would your work week look like if it respected your biology?
+    hashtags: ["#Burnout", "#WorkLife", "#HumanDesign"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_09"
+    position: 9
+    angle: "overwhelm_framework"
+    hook: "Three questions I ask when I'm overwhelmed:"
+    body: |
+      1. Is this urgent or just loud?
+      2. Will this matter in a month?
+      3. What would I do if I had 10% more energy?
+
+      The third one is the cheat code.
+
+      Because "10% more energy" isn't about sleeping more.
+      It's about spending the energy you have differently.
+
+      Sometimes the answer is: do less.
+      Sometimes it's: do it somewhere else.
+      Sometimes it's: stop doing it for other people's approval.
+
+      What's your version of "10% more energy"?
+    hashtags: ["#Overwhelm", "#EnergyManagement", "#10Percent"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_10"
+    position: 10
+    angle: "creativity_space"
+    hook: "The best ideas don't come in meetings."
+    body: |
+      They come:
+      - On walks
+      - In showers
+      - During the space between tasks
+
+      Your brain needs fallow time.
+      Unstructured, unproductive, apparently "wasted" time.
+
+      This isn't unprofessional.
+      This is how creativity works.
+
+      The 10% isn't about doing less work.
+      It's about making space for the work to actually happen.
+
+      When's your fallow time?
+    hashtags: ["#Creativity", "#Rest", "#Productivity"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
