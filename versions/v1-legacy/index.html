@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Family's Sanctuary | Hammiyala Collective by Beforest</title>
+    <meta name="description" content="Own a piece of the Western Ghats where your children's children will create memories. Join 50+ families who've secured their legacy at Beforest collectives.">
+    
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Light-Trial.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Regular-Trial.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beforest-green': '#6b9e45',
+                        'beforest-dark': '#344736',
+                        'beforest-forest': '#215b54',
+                        'beforest-light': '#90b900',
+                    },
+                    fontFamily: {
+                        'arizona': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'ABC Arizona Flare', Georgia, serif; }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        .form-gradient {
+            background: linear-gradient(135deg, rgba(52,71,54,0.95) 0%, rgba(33,85,84,0.95) 100%);
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-out; }
+        .animate-slide-up { animation: slideUp 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .input-underline {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: border-color 0.3s;
+        }
+        .input-underline:focus {
+            outline: none;
+            border-bottom-color: #90b900;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
+                 alt="Beforest" class="h-10 invert">
+            <div class="hidden md:flex items-center gap-8 text-sm tracking-wide">
+                <a href="#vision" class="hover:text-beforest-light transition">Vision</a>
+                <a href="#legacy" class="hover:text-beforest-light transition">Legacy</a>
+                <a href="#community" class="hover:text-beforest-light transition">Community</a>
+                <a href="#join" class="beforest-green-bg px-6 py-2 rounded-full text-white font-medium hover:bg-beforest-light transition">
+                    Secure Your Legacy
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1.webp" 
+                 alt="Hammiyala Collective landscape" 
+                 class="w-full h-full object-cover">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Headline -->
+            <div class="animate-fade-in">
+                <div class="inline-block mb-6">
+                    <span class="bg-beforest-green/20 text-beforest-light px-4 py-1 rounded-full text-sm tracking-wider uppercase border border-beforest-green/30">
+                        Hammiyala Collective • Coorg
+                    </span>
+                </div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6">
+                    Build Your Family's<br>
+                    <span class="text-beforest-light">Sanctuary</span> for<br>
+                    Generations
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
+                    Own a piece of the Western Ghats where your children's children will create memories. 
+                    Join 50+ families who've secured their legacy.
+                </p>
+                
+                <!-- Social Proof -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-beforest-green border-2 border-black flex items-center justify-center text-sm font-medium">A</div>
+                        <div class="w-10 h-10 rounded-full bg-beforest-forest border-2 border-black flex items-center justify-center text-sm font-medium">R</div>
+                        <div class="w-10 h-10 rounded-full bg-beforest-dark border-2 border-black flex items-center justify-center text-sm font-medium">K</div>
+                        <div class="w-10 h-10 rounded-full bg-gray-600 border-2 border-black flex items-center justify-center text-sm font-medium">+47</div>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        <span class="text-white font-medium">50+ families</span> have already secured their legacy
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right: Lead Form -->
+            <div class="animate-slide-up" id="join">
+                <div class="form-gradient rounded-2xl p-8 border border-white/10">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="clock" class="w-4 h-4 text-beforest-light"></i>
+                        <span class="text-beforest-light text-sm font-medium">Limited Availability</span>
+                    </div>
+                    <h2 class="text-2xl font-medium mb-2">Join the Founding Circle</h2>
+                    <p class="text-gray-400 text-sm mb-6">Only 12 founding circle spots remaining for Hammiyala</p>
+                    
+                    <form class="space-y-5" id="leadForm">
+                        <div>
+                            <input type="text" placeholder="Full Name" required
+                                   class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email Address" required
+                                   class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone Number" required
+                                   class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
+                                <option value="" disabled selected>Family Size</option>
+                                <option value="1-2">1-2 members</option>
+                                <option value="3-4">3-4 members</option>
+                                <option value="5+">5+ members</option>
+                            </select>
+                            <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
+                                <option value="" disabled selected>Timeline</option>
+                                <option value="immediate">Immediate</option>
+                                <option value="3months">Within 3 months</option>
+                                <option value="6months">Within 6 months</option>
+                                <option value="exploring">Just exploring</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full beforest-green-bg hover:bg-beforest-light text-white font-medium py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 mt-6">
+                            <span>Secure Your Family's Legacy</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                        
+                        <p class="text-xs text-gray-500 text-center">
+                            Your information is secure. We'll contact you within 24 hours.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6 text-white/50"></i>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl md:text-5xl font-light mb-6">
+                    A Legacy Rooted in the<br><span class="text-beforest-light">Western Ghats</span>
+                </h2>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    The Western Ghats are one of the 10 biodiversity hotspots of the world. 
+                    By securing land here, you're not just buying property — you're becoming a 
+                    guardian of one of Earth's most precious ecosystems.
+                </p>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-8 border border-white/10 rounded-2xl bg-white/5">
+                    <div class="text-4xl font-light text-beforest-light mb-2">100+</div>
+                    <div class="text-gray-400">Acres of pristine land</div>
+                </div>
+                <div class="text-center p-8 border border-white/10 rounded-2xl bg-white/5">
+                    <div class="text-4xl font-light text-beforest-light mb-2">50%</div>
+                    <div class="text-gray-400">Preserved as forest zone</div>
+                </div>
+                <div class="text-center p-8 border border-white/10 rounded-2xl bg-white/5">
+                    <div class="text-4xl font-light text-beforest-light mb-2">∞</div>
+                    <div class="text-gray-400">Generations of memories</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Features -->
+    <section id="legacy" class="py-24 bg-beforest-dark/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-light mb-8">
+                        What Your Family<br>Will Inherit
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="home" class="w-6 h-6 text-beforest-light"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-medium mb-2">Forest-Integrated Home</h3>
+                                <p class="text-gray-400">Build a home that treads lightly on the earth, using zero electricity for heating and pumping needs.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="leaf" class="w-6 h-6 text-beforest-light"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-medium mb-2">Food Forest Share</h3>
+                                <p class="text-gray-400">Participate in growing coffee, spices, and native fruits using forest-friendly methods.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="users" class="w-6 h-6 text-beforest-light"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-medium mb-2">Community of Stewards</h3>
+                                <p class="text-gray-400">Join like-minded families committed to preserving biodiversity for future generations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial Card -->
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+                    <i data-lucide="quote" class="w-10 h-10 text-beforest-light mb-4"></i>
+                    <p class="text-xl leading-relaxed mb-6 italic">
+                        "We bought into Poomaale thinking it was an investment. What we found was a legacy 
+                        for our grandchildren. Our children have already started bringing their friends 
+                        to show them 'where they belong.'"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-beforest-green flex items-center justify-center text-white font-medium">
+                            S
+                        </div>
+                        <div>
+                            <div class="font-medium">Sharma Family</div>
+                            <div class="text-sm text-gray-400">Poomaale 1.0 Members since 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poomaale Success -->
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-beforest-light text-sm tracking-wider uppercase">Proven Track Record</span>
+                <h2 class="text-4xl md:text-5xl font-light mt-4 mb-6">
+                    From Poomaale 1.0 to<br>Your Family's Future
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8">
+                    <div class="text-5xl font-light text-beforest-light mb-4">21M</div>
+                    <div class="text-xl mb-2">Liters of Water Saved</div>
+                    <div class="text-sm text-gray-500">Through regenerative practices</div>
+                </div>
+                <div class="text-center p-8">
+                    <div class="text-5xl font-light text-beforest-light mb-4">68</div>
+                    <div class="text-xl mb-2">Tonnes of NPK Saved</div>
+                    <div class="text-sm text-gray-500">Chemical fertilizers avoided</div>
+                </div>
+                <div class="text-center p-8">
+                    <div class="text-5xl font-light text-beforest-light mb-4">90+</div>
+                    <div class="text-xl mb-2">Cupping Score</div>
+                    <div class="text-sm text-gray-500">Bewild coffee quality benchmark</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-gradient-to-t from-beforest-dark to-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-light mb-6">
+                Your Legacy Starts with<br>a Single Decision
+            </h2>
+            <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                The founding families of Hammiyala will shape its culture for decades to come. 
+                Will your family be among them?
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="#join" class="beforest-green-bg hover:bg-beforest-light text-white font-medium px-8 py-4 rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2">
+                    <span>Secure Your Family's Legacy</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="tel:+918048022333" class="border border-white/30 hover:border-white text-white font-medium px-8 py-4 rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    <span>Call Us: +91 80 4802 2333</span>
+                </a>
+            </div>
+            
+            <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>Only 12 founding circle spots remaining</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
+                         alt="Beforest" class="h-8 invert mb-4">
+                    <p class="text-sm text-gray-500">
+                        Creating sustainable permaculture food forests and collective living spaces across India.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Collectives</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-white transition">Hammiyala Collective</a></li>
+                        <li><a href="#" class="hover:text-white transition">Poomaale 1.0</a></li>
+                        <li><a href="#" class="hover:text-white transition">Poomaale 2.0</a></li>
+                        <li><a href="#" class="hover:text-white transition">Hyderabad Collective</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>+91 80 4802 2333</li>
+                        <li>hello@beforest.co</li>
+                        <li>Bangalore, India</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-beforest-green transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-beforest-green transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-beforest-green transition">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-600">
+                <p>&copy; 2026 Beforest. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Form submission handler
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const form = this;
+            form.innerHTML = `
+                <div class="text-center py-12">
+                    <div class="w-16 h-16 rounded-full bg-beforest-green flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-2">Thank You!</h3>
+                    <p class="text-gray-400">We've received your information and will contact you within 24 hours to discuss your family's legacy at Hammiyala.</p>
+                </div>
+            `;
+            lucide.createIcons();
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

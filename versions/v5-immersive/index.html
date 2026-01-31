@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Where Elephants Roam | Hammiyala Collective by Beforest</title>
+    <meta name="description" content="100 acres in the Pushpagiri ranges — home to big cats, otters, and 150+ bird species. Start your rewilding journey today.">
+    
+    <style>
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Light-Trial.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Regular-Trial.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beforest-green': '#6b9e45',
+                        'beforest-dark': '#344736',
+                        'beforest-forest': '#215b54',
+                        'beforest-light': '#90b900',
+                        'earth': '#8b7355',
+                    },
+                    fontFamily: {
+                        'arizona': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'ABC Arizona Flare', Georgia, serif; }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(52,71,54,0.9) 100%); }
+        .wild-gradient { background: linear-gradient(135deg, rgba(33,85,84,0.95) 0%, rgba(52,71,54,0.95) 100%); }
+        .input-underline {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s;
+        }
+        .input-underline:focus { outline: none; border-bottom-color: #90b900; }
+        .species-card { transition: transform 0.3s; }
+        .species-card:hover { transform: translateY(-4px); }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
+                 alt="Beforest" class="h-10 invert">
+            <a href="#wild" class="beforest-green-bg px-6 py-2 rounded-full text-white font-medium hover:bg-beforest-light transition text-sm">
+                Start Rewilding Journey
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1.webp" 
+                 alt="Wilderness landscape" class="w-full h-full object-cover">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-6">
+                    <i data-lucide="paw-print" class="w-5 h-5 text-earth"></i>
+                    <span class="text-earth text-sm tracking-wider uppercase">Western Ghats Biodiversity Hotspot</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6">
+                    Live Where<br>
+                    <span class="text-beforest-light">Elephants</span><br>
+                    Still Roam Free
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
+                    100 acres in the Pushpagiri ranges — home to big cats, small-clawed otters, 
+                    and 150+ bird species. This is not a zoo. This is your backyard.
+                </p>
+                
+                <!-- Biodiversity Quick Stats -->
+                <div class="grid grid-cols-3 gap-4 mb-8">
+                    <div class="text-center p-4 bg-black/30 rounded-lg border border-white/10">
+                        <i data-lucide="cat" class="w-6 h-6 text-earth mx-auto mb-2"></i>
+                        <div class="text-2xl font-light text-beforest-light">40+</div>
+                        <div class="text-xs text-gray-400">Mammal Species</div>
+                    </div>
+                    <div class="text-center p-4 bg-black/30 rounded-lg border border-white/10">
+                        <i data-lucide="feather" class="w-6 h-6 text-earth mx-auto mb-2"></i>
+                        <div class="text-2xl font-light text-beforest-light">150+</div>
+                        <div class="text-xs text-gray-400">Bird Species</div>
+                    </div>
+                    <div class="text-center p-4 bg-black/30 rounded-lg border border-white/10">
+                        <i data-lucide="bug" class="w-6 h-6 text-earth mx-auto mb-2"></i>
+                        <div class="text-2xl font-light text-beforest-light">60+</div>
+                        <div class="text-xs text-gray-400">Butterfly Species</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lead Form -->
+            <div id="wild">
+                <div class="wild-gradient rounded-2xl p-8 border border-beforest-green/30">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="alert-circle" class="w-4 h-4 text-earth"></i>
+                        <span class="text-earth text-sm font-medium">Wildlife-Rich Sites</span>
+                    </div>
+                    <h2 class="text-2xl font-medium mb-2">Start Your Rewilding Journey</h2>
+                    <p class="text-gray-400 text-sm mb-6">Wildlife-rich founding sites being claimed — secure yours</p>
+                    
+                    <form class="space-y-5" id="wildForm">
+                        <input type="text" placeholder="Full Name" required
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <input type="email" placeholder="Email Address" required
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <input type="tel" placeholder="Phone Number" required
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <input type="text" placeholder="Favorite Wildlife Experience" 
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
+                            <option value="" disabled selected>Conservation Interest Level</option>
+                            <option value="passive">Enjoy observing wildlife</option>
+                            <option value="active">Want to participate in conservation</option>
+                            <option value="expert">Have wildlife/conservation background</option>
+                        </select>
+                        
+                        <button type="submit" 
+                                class="w-full beforest-green-bg hover:bg-beforest-light text-white font-medium py-4 rounded-lg transition-all mt-6 flex items-center justify-center gap-2">
+                            <span>Start Rewilding Journey</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Species Showcase -->
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-earth text-sm tracking-wider uppercase">Documented Wildlife</span>
+                <h2 class="text-4xl md:text-5xl font-light mt-4 mb-6">
+                    Your Future Neighbors
+                </h2>
+                <p class="text-gray-400">
+                    Our estates have become benchmarks for biodiversity documentation in the Western Ghats.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="species-card bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                    <div class="w-20 h-20 rounded-full bg-earth/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="cat" class="w-10 h-10 text-earth"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Big Cats</h3>
+                    <p class="text-sm text-gray-500">Leopards & jungle cats</p>
+                </div>
+                <div class="species-card bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                    <div class="w-20 h-20 rounded-full bg-beforest-green/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="waves" class="w-10 h-10 text-beforest-light"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Otters</h3>
+                    <p class="text-sm text-gray-500">Small-clawed otters</p>
+                </div>
+                <div class="species-card bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                    <div class="w-20 h-20 rounded-full bg-beforest-light/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="bird" class="w-10 h-10 text-beforest-light"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Birds</h3>
+                    <p class="text-sm text-gray-500">150+ species recorded</p>
+                </div>
+                <div class="species-card bg-white/5 rounded-2xl p-6 border border-white/10 text-center">
+                    <div class="w-20 h-20 rounded-full bg-earth/20 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="bug" class="w-10 h-10 text-earth"></i>
+                    </div>
+                    <h3 class="font-medium mb-1">Butterflies</h3>
+                    <p class="text-sm text-gray-500">60+ documented species</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conservation Zone -->
+    <section class="py-24 bg-beforest-forest/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-earth text-sm tracking-wider uppercase">50% Preservation</span>
+                    <h2 class="text-4xl md:text-5xl font-light mt-4 mb-6">
+                        Half for You.<br>Half for Them.
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        We're committed to leaving at least half of Hammiyala as a low-intervention forest zone. 
+                        This isn't just your land — it's a wildlife corridor that happens to have your home in it.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 p-4 bg-black/30 rounded-lg">
+                            <div class="w-12 h-12 rounded-full bg-earth/20 flex items-center justify-center">
+                                <i data-lucide="camera" class="w-6 h-6 text-earth"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Camera Trapping Program</h4>
+                                <p class="text-sm text-gray-500">Document wildlife movement patterns</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-black/30 rounded-lg">
+                            <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center">
+                                <i data-lucide="trees" class="w-6 h-6 text-beforest-light"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Habitat Restoration</h4>
+                                <p class="text-sm text-gray-500">Active rewilding of degraded areas</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-black/30 rounded-lg">
+                            <div class="w-12 h-12 rounded-full bg-beforest-light/20 flex items-center justify-center">
+                                <i data-lucide="map" class="w-6 h-6 text-beforest-light"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Wildlife Corridors</h4>
+                                <p class="text-sm text-gray-500">Connecting fragmented habitats</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visual Split -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-beforest-green/20 rounded-2xl p-6 border border-beforest-green/30 text-center">
+                            <div class="text-5xl font-light text-beforest-light mb-2">50%</div>
+                            <div class="text-lg mb-2">Food Forest Zone</div>
+                            <p class="text-sm text-gray-400">Where humans and cultivation coexist</p>
+                        </div>
+                        <div class="bg-earth/20 rounded-2xl p-6 border border-earth/30 text-center">
+                            <div class="text-5xl font-light text-earth mb-2">50%</div>
+                            <div class="text-lg mb-2">Forest Preserve</div>
+                            <p class="text-sm text-gray-400">Low-intervention wildlife habitat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Rewilding Life -->
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-light text-center mb-16">
+                A Day in the Rewilded Life
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-beforest-green/20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl text-beforest-light">5AM</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Dawn Chorus</h3>
+                    <p class="text-gray-400">
+                        Wake to the Malabar whistling thrush, not an alarm. Step outside for 
+                        birding before breakfast.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-earth/20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl text-earth">2PM</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Trail Camera Check</h3>
+                    <p class="text-gray-400">
+                        Walk the perimeter to collect SD cards. Last night: a leopard and 
+                        her cub passed through.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 rounded-full bg-beforest-light/20 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl text-beforest-light">8PM</span>
+                    </div>
+                    <h3 class="text-xl font-medium mb-3">Night Sounds</h3>
+                    <p class="text-gray-400">
+                        Fall asleep to the symphony of frogs, crickets, and the occasional 
+                        distant elephant rumble.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-gradient-to-t from-beforest-dark to-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <i data-lucide="paw-print" class="w-12 h-12 text-earth mx-auto mb-6"></i>
+            <h2 class="text-4xl md:text-5xl font-light mb-6">
+                The Wild is Calling.<br>
+                <span class="text-beforest-light">Will You Answer?</span>
+            </h2>
+            <p class="text-xl text-gray-400 mb-8">
+                Wildlife-rich founding sites are being claimed. Secure yours before the 
+                big cats choose their territory.
+            </p>
+            <a href="#wild" class="beforest-green-bg hover:bg-beforest-light text-white font-medium px-8 py-4 rounded-lg transition-all inline-flex items-center gap-2">
+                <span>Start Rewilding Journey</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
+                 alt="Beforest" class="h-8 invert mx-auto mb-4">
+            <p class="text-sm text-gray-500">Rewilding land and people in the Western Ghats.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('wildForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.innerHTML = `
+                <div class="text-center py-12">
+                    <div class="w-16 h-16 rounded-full bg-beforest-green flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-2">Welcome to the Wild</h3>
+                    <p class="text-gray-400">We'll connect you with our conservation team within 24 hours.</p>
+                </div>
+            `;
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

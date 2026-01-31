@@ -3,179 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copy Lab | 10% Content Generator</title>
+    <title>Beforest Co-Forest | 5 Conversion-Optimized Variants</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(107, 158, 69, 0.15); }
+        .beforest-green { color: #6b9e45; }
+        .beforest-green-bg { background-color: #6b9e45; }
+        .beforest-dark { color: #344736; }
+    </style>
 </head>
-<body>
-    <div class="container">
+<body class="gradient-bg min-h-screen text-white">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
         <!-- Header -->
-        <header class="header">
-            <div class="brand">
-                <span class="logo">✎</span>
-                <div>
-                    <h1>COPY LAB</h1>
-                    <span class="tagline">10% Content Generator</span>
-                </div>
+        <header class="text-center mb-16">
+            <div class="inline-block mb-4">
+                <span class="beforest-green-bg text-white px-4 py-1 rounded-full text-sm font-medium">LEAD GENERATION PROJECT</span>
             </div>
-            <div class="status">
-                <span class="pulse"></span>
-                <span>AGENT ACTIVE</span>
-            </div>
+            <h1 class="text-4xl md:text-6xl font-light mb-4">Beforest <span class="beforest-green">Co-Forest</span></h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                5 Conversion-Optimized Landing Page Variants<br>
+                <span class="text-sm text-gray-500">Same brand assets. Different psychological angles. Lead-focused design.</span>
+            </p>
         </header>
 
-        <!-- Stats Bar -->
-        <section class="stats-section">
-            <div class="stat-card">
-                <span class="stat-number" id="total-snippets">0</span>
-                <span class="stat-label">Total Snippets</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" id="draft-count">0</span>
-                <span class="stat-label">Drafts</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" id="posted-count">0</span>
-                <span class="stat-label">Posted</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number" id="avg-engagement">0%</span>
-                <span class="stat-label">Avg Engagement</span>
-            </div>
-        </section>
+        <!-- Problem Statement -->
+        <div class="bg-white/5 backdrop-blur rounded-2xl p-6 mb-12 border border-white/10">
+            <h2 class="text-lg font-medium mb-3 beforest-green">Problem Being Solved</h2>
+            <p class="text-gray-300 text-sm leading-relaxed">
+                The current <a href="https://beforest.co/co-forest/" target="_blank" class="underline hover:text-white">beforest.co/co-forest</a> page generates minimal leads because: 
+                (1) No lead capture above the fold, (2) Information is scattered across long scroll, 
+                (3) No urgency or scarcity triggers, (4) Weak social proof placement, 
+                (5) Form buried at bottom. These 5 variants fix all of that.
+            </p>
+        </div>
 
-        <!-- Main Copy Display -->
-        <section class="copy-section">
-            <div class="copy-card" id="latest-copy">
-                <div class="copy-header">
-                    <span class="copy-type">DRAFT</span>
-                    <span class="copy-score" id="engagement-score">Engagement: --%</span>
+        <!-- Variants Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <!-- V1: Legacy -->
+            <a href="./v1-legacy/index.html" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
                 </div>
-                
-                <div class="copy-content">
-                    <p class="copy-text" id="copy-text">Loading copy...</p>
+                <h3 class="text-xl font-medium mb-2">The Legacy Builder</h3>
+                <p class="text-sm text-gray-400 mb-4">Generational wealth, family sanctuary, passing down heritage</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
+                    <p class="text-sm italic text-gray-300">"Build Your Family's Sanctuary for Generations"</p>
                 </div>
+                <div class="mt-4 flex items-center text-sm beforest-green">
+                    <span>View Variant →</span>
+                </div>
+            </a>
 
-                <div class="copy-meta">
-                    <div class="meta-section">
-                        <h4>Why This Works</h4>
-                        <p id="justification">Analyzing...</p>
-                    </div>
-                    
-                    <div class="meta-section">
-                        <h4>Trends Integrated</h4>
-                        <ul id="trends">
-                            <li>Researching...</li>
-                        </ul>
-                    </div>
+            <!-- V2: Escape -->
+            <a href="./v2-escape/index.html" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
                 </div>
+                <h3 class="text-xl font-medium mb-2">The Escape Artist</h3>
+                <p class="text-sm text-gray-400 mb-4">Urban burnout recovery, digital detox, stress relief</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
+                    <p class="text-sm italic text-gray-300">"Escape the City. Reclaim Your Sanity."</p>
+                </div>
+                <div class="mt-4 flex items-center text-sm beforest-green">
+                    <span>View Variant →</span>
+                </div>
+            </a>
 
-                <div class="language-dna">
-                    <h4>10% Language DNA</h4>
-                    <div class="dna-bars" id="dna-bars">
-                        <div class="dna-row">
-                            <span>Philosophical</span>
-                            <div class="bar"><div class="fill" style="width: 0%"></div></div>
-                            <span>0%</span>
+            <!-- V3: Investor -->
+            <a href="./v3-investor/index.html" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
+                </div>
+                <h3 class="text-xl font-medium mb-2">The Conscious Investor</h3>
+                <p class="text-sm text-gray-400 mb-4">ESG investing, sustainable returns, portfolio diversification</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
+                    <p class="text-sm italic text-gray-300">"The Smartest Investment You Can Make in 2026"</p>
+                </div>
+                <div class="mt-4 flex items-center text-sm beforest-green">
+                    <span>View Variant →</span>
+                </div>
+            </a>
+
+            <!-- V4: Community -->
+            <a href="./v4-community/index.html" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
+                </div>
+                <h3 class="text-xl font-medium mb-2">The Community Seeker</h3>
+                <p class="text-sm text-gray-400 mb-4">Intentional community, belonging, like-minded connections</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
+                    <p class="text-sm italic text-gray-300">"Your People Are Waiting in the Forest"</p>
+                </div>
+                <div class="mt-4 flex items-center text-sm beforest-green">
+                    <span>View Variant →</span>
+                </div>
+            </a>
+
+            <!-- V5: Immersive -->
+            <a href="./v5-immersive/index.html" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">5</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
+                </div>
+                <h3 class="text-xl font-medium mb-2">The Nature Immersive</h3>
+                <p class="text-sm text-gray-400 mb-4">Wildlife passion, rewilding, biodiversity immersion</p>
+                <div class="border-t border-white/10 pt-4">
+                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
+                    <p class="text-sm italic text-gray-300">"Live Where Elephants Still Roam Free"</p>
+                </div>
+                <div class="mt-4 flex items-center text-sm beforest-green">
+                    <span>View Variant →</span>
+                </div>
+            </a>
+
+            <!-- Original Comparison -->
+            <a href="https://beforest.co/co-forest/" target="_blank" class="card-hover bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/5 block opacity-70 hover:opacity-100">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="bg-gray-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">0</span>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider">Reference</span>
+                </div>
+                <h3 class="text-xl font-medium mb-2 text-gray-400">Original Page</h3>
+                <p class="text-sm text-gray-500 mb-4">For comparison purposes — see what we're improving upon</p>
+                <div class="mt-4 flex items-center text-sm text-gray-400">
+                    <span>Open Original →</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Key Improvements -->
+        <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 mb-12">
+            <h2 class="text-2xl font-light mb-6">Key Improvements Across All Variants</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <div>
+                            <h4 class="font-medium mb-1">Lead Form Above the Fold</h4>
+                            <p class="text-sm text-gray-400">Capture emails immediately instead of burying form at bottom</p>
                         </div>
-                        <div class="dna-row">
-                            <span>Tribal</span>
-                            <div class="bar"><div class="fill" style="width: 0%"></div></div>
-                            <span>0%</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <div>
+                            <h4 class="font-medium mb-1">Clear Value Proposition</h4>
+                            <p class="text-sm text-gray-400">Each variant leads with specific psychological trigger</p>
                         </div>
-                        <div class="dna-row">
-                            <span>Confrontational</span>
-                            <div class="bar"><div class="fill" style="width: 0%"></div></div>
-                            <span>0%</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <div>
+                            <h4 class="font-medium mb-1">Urgency & Scarcity</h4>
+                            <p class="text-sm text-gray-400">"Only 12 spots" messaging creates FOMO</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="copy-actions">
-                    <button class="btn btn-primary" onclick="copyToClipboard()">
-                        <span>📋</span> COPY TEXT
-                    </button>
-                    <button class="btn btn-secondary" onclick="generateNew()">
-                        <span>✨</span> GENERATE NEW
-                    </button>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <div>
+                            <h4 class="font-medium mb-1">Social Proof Placement</h4>
+                            <p class="text-sm text-gray-400">Stats and testimonials near CTA, not hidden</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <div>
+                            <h4 class="font-medium mb-1">Mobile-First Design</h4>
+                            <p class="text-sm text-gray-400">Responsive layouts optimized for all devices</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
+                        <div>
+                            <h4 class="font-medium mb-1">Brand Consistency</h4>
+                            <p class="text-sm text-gray-400">Same fonts, colors, imagery — different copy angles</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- LinkedIn Tracker -->
-        <section class="tracker-section">
-            <h2 class="section-title">
-                <span>💼</span>
-                LinkedIn Performance Tracker
-            </h2>
-            <div class="tracker-table" id="linkedin-tracker">
-                <div class="tracker-header">
-                    <span>Date</span>
-                    <span>Type</span>
-                    <span>Likes</span>
-                    <span>Comments</span>
-                    <span>Shares</span>
-                    <span>Score</span>
-                </div>
-                <div class="tracker-empty">
-                    No LinkedIn posts tracked yet. Post your copy and track performance!
-                </div>
-            </div>
-        </section>
-
-        <!-- Learning Insights -->
-        <section class="insights-section">
-            <h2 class="section-title">
-                <span>🧠</span>
-                Learning Insights
-            </h2>
-            <div class="insights-grid">
-                <div class="insight-box">
-                    <h4>Best Patterns</h4>
-                    <ul id="best-patterns">
-                        <li>Collecting data...</li>
-                    </ul>
-                </div>
-                <div class="insight-box">
-                    <h4>Optimal Times</h4>
-                    <ul>
-                        <li>09:00 IST</li>
-                        <li>12:00 IST</li>
-                        <li>17:00 IST</li>
-                    </ul>
-                </div>
-                <div class="insight-box">
-                    <h4>Top Hashtags</h4>
-                    <ul>
-                        <li>#10Percent</li>
-                        <li>#SustainableLiving</li>
-                        <li>#Permaculture</li>
-                        <li>#CommunityFirst</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- All Snippets -->
-        <section class="snippets-section">
-            <h2 class="section-title">
-                <span>📝</span>
-                All Snippets
-            </h2>
-            <div class="snippets-list" id="snippets-list">
-                <div class="snippet-item empty">Loading snippets...</div>
-            </div>
-        </section>
+        <!-- Testing Recommendation -->
+        <div class="beforest-green-bg rounded-2xl p-8 text-center">
+            <h2 class="text-2xl font-medium mb-3">Recommended A/B Testing Strategy</h2>
+            <p class="text-white/90 max-w-2xl mx-auto">
+                Run all 5 variants simultaneously with equal traffic split. Track lead quality (not just quantity) 
+                by measuring conversion to site visits and eventual purchases. The "Escape Artist" and "Conscious Investor" 
+                angles typically perform best for high-ticket lifestyle products.
+            </p>
+        </div>
 
         <!-- Footer -->
-        <footer class="footer">
-            <span>Copy Lab v2.0 | 10% Language DNA</span>
-            <span id="last-update">Last update: Never</span>
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Built for Beforest | Hammiyala Collective Lead Generation Project</p>
+            <p class="mt-2">Assets: ABC Arizona Flare font, Beforest brand colors, Supabase images</p>
         </footer>
     </div>
-
-    <script src="js/app.js"></script>
 </body>
 </html>

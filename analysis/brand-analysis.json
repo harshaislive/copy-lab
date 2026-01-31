@@ -1,0 +1,50 @@
+{
+  "analysis": {
+    "brand": "Beforest - Hammiyala Collective",
+    "product": "Wilderness Collective in Coorg - 100+ acre sustainable living community",
+    "current_url": "https://beforest.co/co-forest/"
+  },
+  "fonts": {
+    "primary": "ABC Arizona Flare (Light, Regular, Medium)",
+    "secondary": "ABC Arizona Sans",
+    "fallback": "Poppins, AktivGrotesk, Begum",
+    "src": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/"
+  },
+  "colors": {
+    "primary_green": "#6b9e45",
+    "dark_green": "#344736",
+    "forest_green": "#215b54",
+    "light_green": "#90b900",
+    "accent_yellow": "#e8d833",
+    "link_brown": "#967d48",
+    "background_dark": "#000000",
+    "text_white": "#ffffff",
+    "text_gray": "#626262",
+    "bg_light": "#f7f7f7"
+  },
+  "images": {
+    "hero": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1.webp",
+    "supabase_base": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/",
+    "logo": "https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png"
+  },
+  "key_stats": {
+    "location": "Coorg, 45 min from Madikeri",
+    "size": "100+ acres",
+    "water_saved": "21M liters",
+    "npk_saved": "68 tonnes",
+    "coffee_water": "1000L per kg"
+  },
+  "pain_points_current": [
+    "No clear above-fold CTA for lead capture",
+    "Information scattered - too much scrolling needed",
+    "No urgency or scarcity elements",
+    "Form buried at bottom",
+    "Value proposition not immediately clear",
+    "Missing social proof/trust signals above fold"
+  ],
+  "target_audience": {
+    "demographics": "Affluent urban Indians, 30-55 years",
+    "psychographics": "Escape seekers, conscious investors, nature lovers, legacy builders",
+    "income": "High net worth, can invest in land + home construction"
+  }
+}

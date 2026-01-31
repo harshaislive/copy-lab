@@ -1,0 +1,82 @@
+{
+  "version_1_legacy": {
+    "name": "The Legacy Builder",
+    "angle": "Generational wealth and family sanctuary",
+    "psychological_trigger": "Legacy, generational wealth, family heritage",
+    "headline": "Build Your Family's Sanctuary for Generations",
+    "subheadline": "Own a piece of the Western Ghats where your children's children will create memories",
+    "key_benefits": [
+      "Create a multi-generational family retreat in one of India's 10 biodiversity hotspots",
+      "Pass down not just land, but a living legacy of conservation and connection",
+      "Join 50+ families who've secured their children's future in nature"
+    ],
+    "cta_button": "Secure Your Family's Legacy",
+    "form_fields": ["Name", "Email", "Phone", "Family Size", "Timeline to Invest"],
+    "social_proof": "50+ families have already secured their legacy at Beforest collectives",
+    "urgency": "Only 12 founding circle spots remaining for Hammiyala"
+  },
+  "version_2_escape": {
+    "name": "The Escape Artist",
+    "angle": "Urban burnout recovery and digital detox",
+    "psychological_trigger": "Stress relief, FOMO on peace, digital fatigue",
+    "headline": "Escape the City. Reclaim Your Sanity.",
+    "subheadline": "45 minutes from Madikeri lies your antidote to urban chaos — 100 acres of pure, wild silence",
+    "key_benefits": [
+      "Disconnect from screens, reconnect with yourself in our zero-electricity homes",
+      "Wake up to 150+ bird species instead of traffic horns",
+      "Your own perennial stream for morning meditation and evening unwinding"
+    ],
+    "cta_button": "Book Your Escape Call",
+    "form_fields": ["Name", "Email", "Phone", "Current City", "Biggest Stressor"],
+    "social_proof": "Members report 73% reduction in stress after their first month",
+    "urgency": "6 founding members already escaped — limited spots for urban warriors"
+  },
+  "version_3_investor": {
+    "name": "The Conscious Investor",
+    "angle": "ESG investing with tangible returns",
+    "psychological_trigger": "FOMO on green investments, impact validation, portfolio diversification",
+    "headline": "The Smartest Investment You Can Make in 2026",
+    "subheadline": "ESG-compliant land assets in the Western Ghats — where biodiversity meets ROI",
+    "key_benefits": [
+      "Proven 4Returns framework by Commonland — financial, natural, social, and inspirational returns",
+      "Forest-friendly produce from Bewild™ already hitting 90+ on cupping scales",
+      "Hospitality operations planned to generate passive income from your investment"
+    ],
+    "cta_button": "Get Investment Deck",
+    "form_fields": ["Name", "Email", "Phone", "Investment Range", "Current Portfolio Focus"],
+    "social_proof": "Poomaale 1.0: 21M liters water saved, 68 tonnes NPK avoided — measurable impact",
+    "urgency": "Pre-launch pricing ends March 31 — early investors get priority home site selection"
+  },
+  "version_4_community": {
+    "name": "The Community Seeker",
+    "angle": "Intentional community and like-minded connections",
+    "psychological_trigger": "Belonging, loneliness, shared values, tribe-seeking",
+    "headline": "Your People Are Waiting in the Forest",
+    "subheadline": "Join 50+ conservation-minded families building something extraordinary together in Coorg",
+    "key_benefits": [
+      "Founding Circle access — be part of the core community that shapes Hammiyala's culture",
+      "Monthly gatherings, shared harvests, and collective stewardship of 100+ acres",
+      "Connect with entrepreneurs, artists, and changemakers who've already chosen this path"
+    ],
+    "cta_button": "Meet the Community",
+    "form_fields": ["Name", "Email", "Phone", "What You Do", "What Community Means to You"],
+    "social_proof": "Beforest members have started 12+ collaborative ventures together",
+    "urgency": "Founding Circle closes soon — only 12 spots for founding families"
+  },
+  "version_5_immersive": {
+    "name": "The Nature Immersive",
+    "angle": "Wildlife, rewilding, and forest immersion",
+    "psychological_trigger": "Biophilia, wildlife passion, conservation drive, nature deficit disorder",
+    "headline": "Live Where Elephants Still Roam Free",
+    "subheadline": "100 acres in the Pushpagiri ranges — home to big cats, otters, and 150+ bird species",
+    "key_benefits": [
+      "50% of Hammiyala preserved as low-intervention forest — your own wildlife corridor",
+      "Daily encounters with biodiversity most only see on National Geographic",
+      "Participate in active conservation — from camera trapping to habitat restoration"
+    ],
+    "cta_button": "Start Your Rewilding Journey",
+    "form_fields": ["Name", "Email", "Phone", "Favorite Wildlife Experience", "Conservation Interest"],
+    "social_proof": "Our estates have documented 40+ mammal species, 150+ birds, 60+ butterflies",
+    "urgency": "Wildlife-rich founding sites being claimed — secure yours before they're gone"
+  }
+}

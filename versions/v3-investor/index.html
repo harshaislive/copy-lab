@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Investment 2026 | Hammiyala Collective by Beforest</title>
+    <meta name="description" content="ESG-compliant land assets in the Western Ghats — where biodiversity meets ROI. Get the investment deck today.">
+    
+    <style>
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Light-Trial.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Regular-Trial.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beforest-green': '#6b9e45',
+                        'beforest-dark': '#344736',
+                        'beforest-forest': '#215b54',
+                        'beforest-light': '#90b900',
+                        'gold': '#c9a227',
+                    },
+                    fontFamily: {
+                        'arizona': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'ABC Arizona Flare', Georgia, serif; }
+        .hero-gradient { background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(52,71,54,0.9) 100%); }
+        .data-card { background: linear-gradient(135deg, rgba(107,158,69,0.1) 0%, rgba(52,71,54,0.2) 100%); }
+        .input-underline {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            transition: all 0.3s;
+        }
+        .input-underline:focus { outline: none; border-bottom-color: #90b900; }
+        .metric-bar { 
+            height: 8px; 
+            background: linear-gradient(90deg, #6b9e45 0%, #90b900 100%);
+            border-radius: 4px;
+            transition: width 1.5s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
+                 alt="Beforest" class="h-10 invert">
+            <div class="flex items-center gap-6">
+                <span class="text-gold text-sm font-medium hidden md:block">
+                    <i data-lucide="trending-up" class="w-4 h-4 inline mr-1"></i>
+                    ESG Investment Opportunity
+                </span>
+                <a href="#invest" class="beforest-green-bg px-6 py-2 rounded-lg text-white font-medium hover:bg-beforest-light transition text-sm">
+                    Get Investment Deck
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1.webp" 
+                 alt="Investment landscape" class="w-full h-full object-cover">
+            <div class="hero-gradient absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/20 border border-gold/30 rounded-full">
+                    <i data-lucide="award" class="w-4 h-4 text-gold"></i>
+                    <span class="text-gold text-sm tracking-wider">4Returns Framework by Commonland</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6">
+                    The Smartest<br>
+                    <span class="text-beforest-light">Investment</span> You<br>
+                    Can Make in 2026
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
+                    ESG-compliant land assets in the Western Ghats — where biodiversity preservation 
+                    meets measurable financial returns.
+                </p>
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-3 gap-6 mb-8">
+                    <div class="text-center p-4 bg-white/10 rounded-lg border border-white/10">
+                        <div class="text-2xl font-light text-beforest-light">100+</div>
+                        <div class="text-xs text-gray-400">Acres</div>
+                    </div>
+                    <div class="text-center p-4 bg-white/10 rounded-lg border border-white/10">
+                        <div class="text-2xl font-light text-beforest-light">4</div>
+                        <div class="text-xs text-gray-400">Return Types</div>
+                    </div>
+                    <div class="text-center p-4 bg-white/10 rounded-lg border border-white/10">
+                        <div class="text-2xl font-light text-beforest-light">90+</div>
+                        <div class="text-xs text-gray-400">Cupping Score</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lead Form -->
+            <div id="invest">
+                <div class="bg-gradient-to-br from-beforest-dark/95 to-beforest-forest/95 rounded-2xl p-8 border border-beforest-green/30">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
+                        <span class="text-gold text-sm font-medium">Pre-Launch Pricing Ends March 31</span>
+                    </div>
+                    <h2 class="text-2xl font-medium mb-2">Get Investment Deck</h2>
+                    <p class="text-gray-400 text-sm mb-6">Early investors get priority home site selection</p>
+                    
+                    <form class="space-y-5" id="investForm">
+                        <input type="text" placeholder="Full Name" required
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <input type="email" placeholder="Email Address" required
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <input type="tel" placeholder="Phone Number" required
+                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
+                        <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
+                            <option value="" disabled selected>Investment Range</option>
+                            <option value="1-2cr">₹1-2 Crore</option>
+                            <option value="2-3cr">₹2-3 Crore</option>
+                            <option value="3-5cr">₹3-5 Crore</option>
+                            <option value="5cr+">₹5 Crore+</option>
+                        </select>
+                        <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
+                            <option value="" disabled selected>Current Portfolio Focus</option>
+                            <option value="realestate">Real Estate</option>
+                            <option value="esg">ESG/Sustainable</option>
+                            <option value="diversified">Diversified</option>
+                            <option value="impact">Impact Investing</option>
+                        </select>
+                        
+                        <button type="submit" 
+                                class="w-full beforest-green-bg hover:bg-beforest-light text-white font-medium py-4 rounded-lg transition-all mt-6 flex items-center justify-center gap-2">
+                            <span>Get Investment Deck</span>
+                            <i data-lucide="file-text" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4Returns Framework -->
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold text-sm tracking-wider uppercase">Proven Framework</span>
+                <h2 class="text-4xl md:text-5xl font-light mt-4 mb-6">
+                    The 4Returns Framework
+                </h2>
+                <p class="text-gray-400">
+                    Developed by Commonland, used globally to measure holistic returns from landscape restoration.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="data-card rounded-2xl p-6 border border-beforest-green/20">
+                    <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center mb-4">
+                        <i data-lucide="banknote" class="w-6 h-6 text-beforest-light"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2">Financial Returns</h3>
+                    <p class="text-sm text-gray-400">Land appreciation, produce revenue, hospitality income</p>
+                </div>
+                <div class="data-card rounded-2xl p-6 border border-beforest-green/20">
+                    <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center mb-4">
+                        <i data-lucide="leaf" class="w-6 h-6 text-beforest-light"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2">Natural Returns</h3>
+                    <p class="text-sm text-gray-400">Biodiversity increase, water conservation, carbon sequestration</p>
+                </div>
+                <div class="data-card rounded-2xl p-6 border border-beforest-green/20">
+                    <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-6 h-6 text-beforest-light"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2">Social Returns</h3>
+                    <p class="text-sm text-gray-400">Community building, local employment, knowledge sharing</p>
+                </div>
+                <div class="data-card rounded-2xl p-6 border border-beforest-green/20">
+                    <div class="w-12 h-12 rounded-full bg-beforest-green/20 flex items-center justify-center mb-4">
+                        <i data-lucide="heart" class="w-6 h-6 text-beforest-light"></i>
+                    </div>
+                    <h3 class="text-xl font-medium mb-2">Inspirational Returns</h3>
+                    <p class="text-sm text-gray-400">Personal wellbeing, legacy creation, reconnection with nature</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poomaale Track Record -->
+    <section class="py-24 bg-beforest-dark/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-gold text-sm tracking-wider uppercase">Proven Track Record</span>
+                <h2 class="text-4xl md:text-5xl font-light mt-4 mb-6">
+                    Poomaale 1.0: The Numbers Don't Lie
+                </h2>
+            </div>
+            
+            <!-- Metrics -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-black/30 rounded-2xl p-8 border border-white/10">
+                    <div class="text-5xl font-light text-beforest-light mb-2">21M</div>
+                    <div class="text-lg mb-2">Liters of Water Saved</div>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-4">
+                        <div class="metric-bar" style="width: 85%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500">Through regenerative water management practices</p>
+                </div>
+                <div class="bg-black/30 rounded-2xl p-8 border border-white/10">
+                    <div class="text-5xl font-light text-beforest-light mb-2">68</div>
+                    <div class="text-lg mb-2">Tonnes of NPK Saved</div>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-4">
+                        <div class="metric-bar" style="width: 72%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500">Chemical fertilizers avoided through natural methods</p>
+                </div>
+                <div class="bg-black/30 rounded-2xl p-8 border border-white/10">
+                    <div class="text-5xl font-light text-beforest-light mb-2">1000L</div>
+                    <div class="text-lg mb-2">Water per KG of Coffee</div>
+                    <div class="w-full bg-white/10 rounded-full h-2 mb-4">
+                        <div class="metric-bar" style="width: 60%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500">vs. 4000L+ in conventional plantations</p>
+                </div>
+            </div>
+            
+            <!-- Bewild Performance -->
+            <div class="bg-gradient-to-r from-beforest-green/20 to-gold/20 rounded-2xl p-8 border border-beforest-green/30">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div>
+                        <h3 class="text-2xl font-medium mb-2">Bewild™ Coffee Performance</h3>
+                        <p class="text-gray-400">Forest-friendly produce from our estates</p>
+                    </div>
+                    <div class="flex items-center gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-light text-gold">90+</div>
+                            <div class="text-sm text-gray-400">Cupping Score</div>
+                        </div>
+                        <div class="h-12 w-px bg-white/20"></div>
+                        <div class="text-center">
+                            <div class="text-4xl font-light text-beforest-light">Premium</div>
+                            <div class="text-sm text-gray-400">Market Price</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Comparison -->
+    <section class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-light text-center mb-16">
+                Why Land Beats Traditional Investments
+            </h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-white/20">
+                            <th class="text-left py-4 px-6 font-medium text-gray-400">Investment Type</th>
+                            <th class="text-center py-4 px-6 font-medium text-gray-400">Tangible Asset</th>
+                            <th class="text-center py-4 px-6 font-medium text-gray-400">ESG Impact</th>
+                            <th class="text-center py-4 px-6 font-medium text-gray-400">Lifestyle Benefit</th>
+                            <th class="text-center py-4 px-6 font-medium text-gray-400">Inflation Hedge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-white/10">
+                            <td class="py-4 px-6">Stock Market</td>
+                            <td class="text-center py-4 px-6 text-red-400">✗</td>
+                            <td class="text-center py-4 px-6 text-red-400">✗</td>
+                            <td class="text-center py-4 px-6 text-red-400">✗</td>
+                            <td class="text-center py-4 px-6 text-yellow-400">~</td>
+                        </tr>
+                        <tr class="border-b border-white/10">
+                            <td class="py-4 px-6">Urban Real Estate</td>
+                            <td class="text-center py-4 px-6 text-beforest-light">✓</td>
+                            <td class="text-center py-4 px-6 text-red-400">✗</td>
+                            <td class="text-center py-4 px-6 text-yellow-400">~</td>
+                            <td class="text-center py-4 px-6 text-beforest-light">✓</td>
+                        </tr>
+                        <tr class="border-b border-white/10 bg-beforest-green/10">
+                            <td class="py-4 px-6 font-medium text-beforest-light">Hammiyala Collective</td>
+                            <td class="text-center py-4 px-6 text-beforest-light">✓</td>
+                            <td class="text-center py-4 px-6 text-beforest-light">✓</td>
+                            <td class="text-center py-4 px-6 text-beforest-light">✓</td>
+                            <td class="text-center py-4 px-6 text-beforest-light">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-gradient-to-t from-beforest-dark to-black">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-gold/20 border border-gold/30 rounded-full">
+                <i data-lucide="clock" class="w-4 h-4 text-gold"></i>
+                <span class="text-gold text-sm">Pre-launch pricing ends March 31</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-light mb-6">
+                Secure Priority Site Selection.<br>
+                <span class="text-beforest-light">Request Your Deck Today.</span>
+            </h2>
+            <a href="#invest" class="beforest-green-bg hover:bg-beforest-light text-white font-medium px-8 py-4 rounded-lg transition-all inline-flex items-center gap-2">
+                <span>Get Investment Deck</span>
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
+                 alt="Beforest" class="h-8 invert mx-auto mb-4">
+            <p class="text-sm text-gray-500">
+                ESG investments in the Western Ghats. Past performance at Poomaale 1.0 does not guarantee future results.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('investForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.innerHTML = `
+                <div class="text-center py-12">
+                    <div class="w-16 h-16 rounded-full bg-beforest-green flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="check" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-medium mb-2">Deck on Its Way</h3>
+                    <p class="text-gray-400">We'll email you the investment deck within 24 hours.</p>
+                </div>
+            `;
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
