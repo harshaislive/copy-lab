@@ -3,215 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beforest Co-Forest | 5 Conversion-Optimized Variants</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Hammiyala Collective | Beforest</title>
+    <meta name="description" content="A wilderness collective in the heart of Coorg. 100 acres of the Western Ghats.">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%); }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(107, 158, 69, 0.15); }
-        .beforest-green { color: #6b9e45; }
-        .beforest-green-bg { background-color: #6b9e45; }
-        .beforest-dark { color: #344736; }
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Light-Trial.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beforest': '#6b9e45',
+                        'beforest-dark': '#344736',
+                    },
+                    fontFamily: {
+                        'editorial': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            font-family: 'ABC Arizona Flare', Georgia, serif; 
+            font-weight: 300;
+        }
+        .img-editorial {
+            filter: contrast(0.95) saturate(0.9);
+        }
     </style>
 </head>
-<body class="gradient-bg min-h-screen text-white">
-    <div class="container mx-auto px-4 py-12 max-w-6xl">
-        <!-- Header -->
-        <header class="text-center mb-16">
-            <div class="inline-block mb-4">
-                <span class="beforest-green-bg text-white px-4 py-1 rounded-full text-sm font-medium">LEAD GENERATION PROJECT</span>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-light mb-4">Beforest <span class="beforest-green">Co-Forest</span></h1>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                5 Conversion-Optimized Landing Page Variants<br>
-                <span class="text-sm text-gray-500">Same brand assets. Different psychological angles. Lead-focused design.</span>
-            </p>
-        </header>
-
-        <!-- Problem Statement -->
-        <div class="bg-white/5 backdrop-blur rounded-2xl p-6 mb-12 border border-white/10">
-            <h2 class="text-lg font-medium mb-3 beforest-green">Problem Being Solved</h2>
-            <p class="text-gray-300 text-sm leading-relaxed">
-                The current <a href="https://beforest.co/co-forest/" target="_blank" class="underline hover:text-white">beforest.co/co-forest</a> page generates minimal leads because: 
-                (1) No lead capture above the fold, (2) Information is scattered across long scroll, 
-                (3) No urgency or scarcity triggers, (4) Weak social proof placement, 
-                (5) Form buried at bottom. These 5 variants fix all of that.
-            </p>
-        </div>
-
-        <!-- Variants Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <!-- V1: Legacy -->
-            <a href="./v1/" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">1</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
+<body class="bg-black text-white min-h-screen">
+    
+    <div class="min-h-screen flex flex-col">
+        <div class="flex-1 flex items-center justify-center p-8">
+            <div class="max-w-4xl w-full">
+                
+                <div class="text-center mb-16">
+                    <img src="https://beforest.co/wp-content/uploads/2024/10/24-Beforest-White-with-Tagline.png" 
+                         alt="Beforest" class="h-12 mx-auto mb-8">
+                    <p class="text-sm uppercase tracking-widest text-white/50 mb-4">Landing Page Variants</p>
+                    <h1 class="text-4xl md:text-5xl font-light mb-6">Hammiyala Collective</h1>
+                    <p class="text-white/60 max-w-xl mx-auto">
+                        Five editorial approaches to the same offering. 
+                        Each designed for high-net-worth individuals.
+                    </p>
                 </div>
-                <h3 class="text-xl font-medium mb-2">The Legacy Builder</h3>
-                <p class="text-sm text-gray-400 mb-4">Generational wealth, family sanctuary, passing down heritage</p>
-                <div class="border-t border-white/10 pt-4">
-                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
-                    <p class="text-sm italic text-gray-300">"Build Your Family's Sanctuary for Generations"</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+                    <a href="./v1/" class="bg-black p-8 hover:bg-white/5 transition block">
+                        <p class="text-sm text-white/40 mb-2">01</p>
+                        <h2 class="text-xl font-normal mb-2">The Collective</h2>
+                        <p class="text-sm text-white/50">Complete overview with full imagery</p>
+                    </a>
+                    <a href="./v2/" class="bg-black p-8 hover:bg-white/5 transition block">
+                        <p class="text-sm text-white/40 mb-2">02</p>
+                        <h2 class="text-xl font-normal mb-2">Land as Legacy</h2>
+                        <p class="text-sm text-white/50">Generational wealth positioning</p>
+                    </a>
+                    <a href="./v3/" class="bg-black p-8 hover:bg-white/5 transition block">
+                        <p class="text-sm text-white/40 mb-2">03</p>
+                        <h2 class="text-xl font-normal mb-2">Conscious Investment</h2>
+                        <p class="text-sm text-white/50">ESG and 4Returns framework</p>
+                    </a>
+                    <a href="./v4/" class="bg-black p-8 hover:bg-white/5 transition block">
+                        <p class="text-sm text-white/40 mb-2">04</p>
+                        <h2 class="text-xl font-normal mb-2">Intentional Community</h2>
+                        <p class="text-sm text-white/50">Shared stewardship focus</p>
+                    </a>
+                    <a href="./v5/" class="bg-black p-8 hover:bg-white/5 transition block">
+                        <p class="text-sm text-white/40 mb-2">05</p>
+                        <h2 class="text-xl font-normal mb-2">Wilderness Living</h2>
+                        <p class="text-sm text-white/50">Biodiversity and wildlife</p>
+                    </a>
+                    <a href="https://beforest.co/co-forest/" target="_blank" class="bg-black p-8 hover:bg-white/5 transition block">
+                        <p class="text-sm text-white/40 mb-2">00</p>
+                        <h2 class="text-xl font-normal mb-2">Original Site</h2>
+                        <p class="text-sm text-white/50">Reference comparison</p>
+                    </a>
                 </div>
-                <div class="mt-4 flex items-center text-sm beforest-green">
-                    <span>View Variant →</span>
+                
+                <div class="mt-16 text-center">
+                    <p class="text-xs text-white/30 uppercase tracking-widest">
+                        Editorial Design System • No Emojis • No Glass Morphism • Premium Aesthetic
+                    </p>
                 </div>
-            </a>
-
-            <!-- V2: Escape -->
-            <a href="./v2/" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">2</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
-                </div>
-                <h3 class="text-xl font-medium mb-2">The Escape Artist</h3>
-                <p class="text-sm text-gray-400 mb-4">Urban burnout recovery, digital detox, stress relief</p>
-                <div class="border-t border-white/10 pt-4">
-                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
-                    <p class="text-sm italic text-gray-300">"Escape the City. Reclaim Your Sanity."</p>
-                </div>
-                <div class="mt-4 flex items-center text-sm beforest-green">
-                    <span>View Variant →</span>
-                </div>
-            </a>
-
-            <!-- V3: Investor -->
-            <a href="./v3/" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">3</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
-                </div>
-                <h3 class="text-xl font-medium mb-2">The Conscious Investor</h3>
-                <p class="text-sm text-gray-400 mb-4">ESG investing, sustainable returns, portfolio diversification</p>
-                <div class="border-t border-white/10 pt-4">
-                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
-                    <p class="text-sm italic text-gray-300">"The Smartest Investment You Can Make in 2026"</p>
-                </div>
-                <div class="mt-4 flex items-center text-sm beforest-green">
-                    <span>View Variant →</span>
-                </div>
-            </a>
-
-            <!-- V4: Community -->
-            <a href="./v4/" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">4</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
-                </div>
-                <h3 class="text-xl font-medium mb-2">The Community Seeker</h3>
-                <p class="text-sm text-gray-400 mb-4">Intentional community, belonging, like-minded connections</p>
-                <div class="border-t border-white/10 pt-4">
-                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
-                    <p class="text-sm italic text-gray-300">"Your People Are Waiting in the Forest"</p>
-                </div>
-                <div class="mt-4 flex items-center text-sm beforest-green">
-                    <span>View Variant →</span>
-                </div>
-            </a>
-
-            <!-- V5: Immersive -->
-            <a href="./v5/" class="card-hover bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10 block">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="beforest-green-bg text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">5</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-wider">Psych Angle</span>
-                </div>
-                <h3 class="text-xl font-medium mb-2">The Nature Immersive</h3>
-                <p class="text-sm text-gray-400 mb-4">Wildlife passion, rewilding, biodiversity immersion</p>
-                <div class="border-t border-white/10 pt-4">
-                    <p class="text-xs text-gray-500 mb-1">Headline:</p>
-                    <p class="text-sm italic text-gray-300">"Live Where Elephants Still Roam Free"</p>
-                </div>
-                <div class="mt-4 flex items-center text-sm beforest-green">
-                    <span>View Variant →</span>
-                </div>
-            </a>
-
-            <!-- Original Comparison -->
-            <a href="https://beforest.co/co-forest/" target="_blank" class="card-hover bg-white/5 backdrop-blur rounded-2xl p-6 border border-white/5 block opacity-70 hover:opacity-100">
-                <div class="flex items-center justify-between mb-4">
-                    <span class="bg-gray-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">0</span>
-                    <span class="text-xs text-gray-500 uppercase tracking-wider">Reference</span>
-                </div>
-                <h3 class="text-xl font-medium mb-2 text-gray-400">Original Page</h3>
-                <p class="text-sm text-gray-500 mb-4">For comparison purposes — see what we're improving upon</p>
-                <div class="mt-4 flex items-center text-sm text-gray-400">
-                    <span>Open Original →</span>
-                </div>
-            </a>
-        </div>
-
-        <!-- Key Improvements -->
-        <div class="bg-white/5 backdrop-blur rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 class="text-2xl font-light mb-6">Key Improvements Across All Variants</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
-                        <div>
-                            <h4 class="font-medium mb-1">Lead Form Above the Fold</h4>
-                            <p class="text-sm text-gray-400">Capture emails immediately instead of burying form at bottom</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
-                        <div>
-                            <h4 class="font-medium mb-1">Clear Value Proposition</h4>
-                            <p class="text-sm text-gray-400">Each variant leads with specific psychological trigger</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
-                        <div>
-                            <h4 class="font-medium mb-1">Urgency & Scarcity</h4>
-                            <p class="text-sm text-gray-400">"Only 12 spots" messaging creates FOMO</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
-                        <div>
-                            <h4 class="font-medium mb-1">Social Proof Placement</h4>
-                            <p class="text-sm text-gray-400">Stats and testimonials near CTA, not hidden</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
-                        <div>
-                            <h4 class="font-medium mb-1">Mobile-First Design</h4>
-                            <p class="text-sm text-gray-400">Responsive layouts optimized for all devices</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <span class="beforest-green-bg text-white w-6 h-6 rounded flex items-center justify-center text-sm flex-shrink-0">✓</span>
-                        <div>
-                            <h4 class="font-medium mb-1">Brand Consistency</h4>
-                            <p class="text-sm text-gray-400">Same fonts, colors, imagery — different copy angles</p>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
-
-        <!-- Testing Recommendation -->
-        <div class="beforest-green-bg rounded-2xl p-8 text-center">
-            <h2 class="text-2xl font-medium mb-3">Recommended A/B Testing Strategy</h2>
-            <p class="text-white/90 max-w-2xl mx-auto">
-                Run all 5 variants simultaneously with equal traffic split. Track lead quality (not just quantity) 
-                by measuring conversion to site visits and eventual purchases. The "Escape Artist" and "Conscious Investor" 
-                angles typically perform best for high-ticket lifestyle products.
-            </p>
-        </div>
-
-        <!-- Footer -->
-        <footer class="text-center mt-12 text-gray-500 text-sm">
-            <p>Built for Beforest | Hammiyala Collective Lead Generation Project</p>
-            <p class="mt-2">Assets: ABC Arizona Flare font, Beforest brand colors, Supabase images</p>
-        </footer>
     </div>
+    
 </body>
 </html>

@@ -1,0 +1,55 @@
+{
+  "brand": {
+    "name": "Beforest - Hammiyala Collective",
+    "positioning": "Editorial, Premium, HNI-focused",
+    "tone": "Sophisticated, understated, confident"
+  },
+  "assets": {
+    "logo_black": "https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png",
+    "logo_white": "https://beforest.co/wp-content/uploads/2024/10/24-Beforest-White-with-Tagline.png",
+    "hero_mobile": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1.webp",
+    "hero_desktop": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1desktop.webp",
+    "our_vision": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/ourvision.jpg",
+    "the_origins": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/theorigins%20(1).png",
+    "poomaale_desktop": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/poomaale1desktop.png",
+    "hammiyala_collective": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/hammiyalacollectivedesktop.png",
+    "the_estate": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/theestatedesktop.png",
+    "stewardship": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/stewardship.png",
+    "mindful_living": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/mindful%20living%20spaces.png",
+    "collaborative_governance": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/collaborative%20governance.png",
+    "wildlife_sanctuary": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/wildlife%20sanctuary.png",
+    "stat_21m": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/stat1.png",
+    "stat_68t": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/stat2.png",
+    "stat_1000l": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/stat3.png",
+    "section2": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/section2desktop.png",
+    "section4_community": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/section4-community.png",
+    "last_section": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/lastsection.png",
+    "vision": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/vision.png",
+    "frog": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/frog.png",
+    "vector": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/vector.png",
+    "whatwere": "https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/whatwe're.png"
+  },
+  "style_guide": {
+    "aesthetic": "Editorial, Premium, HNI-focused",
+    "no_emojis": true,
+    "no_glass_morphism": true,
+    "typography": "ABC Arizona Flare - Light weights, generous line height",
+    "colors": {
+      "primary": "#6b9e45",
+      "dark": "#344736",
+      "forest": "#215b54",
+      "light": "#90b900",
+      "black": "#000000",
+      "white": "#ffffff",
+      "gray_100": "#f7f7f7",
+      "gray_600": "#626262",
+      "gray_800": "#161922"
+    },
+    "layout": "Full-bleed imagery, generous whitespace, editorial typography scale"
+  },
+  "copy_principles": {
+    "tone": "Confident, sophisticated, never desperate",
+    "avoid": ["cheap urgency", "emojis", "gimmicky CTAs", "excessive punctuation"],
+    "use": ["measured language", "subtle exclusivity", "invitation over persuasion"]
+  }
+}

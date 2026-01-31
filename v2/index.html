@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape the City | Hammiyala Collective by Beforest</title>
-    <meta name="description" content="45 minutes from Madikeri lies your antidote to urban chaos — 100 acres of pure, wild silence. Book your escape call today.">
+    <title>Land as Legacy | Hammiyala Collective</title>
+    <meta name="description" content="Own a piece of the Western Ghats. A generational asset in one of India's ten biodiversity hotspots.">
     
     <style>
         @font-face {
@@ -24,21 +24,18 @@
     </style>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'beforest-green': '#6b9e45',
+                        'beforest': '#6b9e45',
                         'beforest-dark': '#344736',
                         'beforest-forest': '#215b54',
-                        'beforest-light': '#90b900',
-                        'calm': '#7c9a6a',
                     },
                     fontFamily: {
-                        'arizona': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
+                        'editorial': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
                     }
                 }
             }
@@ -46,322 +43,202 @@
     </script>
     
     <style>
-        body { font-family: 'ABC Arizona Flare', Georgia, serif; }
-        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(52,71,54,0.8) 100%); }
-        .calm-gradient { background: linear-gradient(135deg, rgba(52,71,54,0.95) 0%, rgba(33,85,84,0.95) 100%); }
-        @keyframes breathe { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.05); opacity: 1; } }
-        .breathe { animation: breathe 4s ease-in-out infinite; }
-        .input-underline {
+        body { 
+            font-family: 'ABC Arizona Flare', Georgia, serif; 
+            font-weight: 300;
+        }
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .text-balance { text-wrap: balance; }
+        
+        .form-input {
             background: transparent;
             border: none;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            transition: all 0.3s;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding: 1rem 0;
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            width: 100%;
+            transition: border-color 0.3s;
         }
-        .input-underline:focus { outline: none; border-bottom-color: #90b900; }
+        .form-input:focus {
+            outline: none;
+            border-bottom-color: #6b9e45;
+        }
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .btn-primary {
+            background-color: #6b9e45;
+            color: white;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #5a8a3a;
+        }
+        
+        .img-editorial {
+            filter: contrast(0.95) saturate(0.9);
+        }
     </style>
 </head>
-<body class="bg-beforest-dark text-white overflow-x-hidden">
+<body class="bg-black text-white">
     
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-beforest-dark/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
-                 alt="Beforest" class="h-10 invert">
-            <a href="#escape" class="beforest-green-bg px-6 py-2 rounded-full text-white font-medium hover:bg-beforest-light transition text-sm">
-                Book Escape Call
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90">
+        <div class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+            <img src="https://beforest.co/wp-content/uploads/2024/10/24-Beforest-White-with-Tagline.png" 
+                 alt="Beforest" class="h-8">
+            <a href="#inquiry" class="text-sm uppercase tracking-widest hover:text-beforest transition">
+                Inquire
             </a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center">
-        <div class="absolute inset-0 z-0">
-            <img src="https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1.webp" 
-                 alt="Peaceful forest" class="w-full h-full object-cover">
-            <div class="hero-gradient absolute inset-0"></div>
+    <section class="relative min-h-screen">
+        <div class="absolute inset-0">
+            <img src="https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/hammiyalapage/section1desktop.webp" 
+                 alt="Hammiyala" class="w-full h-full object-cover img-editorial">
+            <div class="hero-overlay absolute inset-0"></div>
         </div>
         
-        <div class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-flex items-center gap-2 mb-6 breathe">
-                    <i data-lucide="wind" class="w-5 h-5 text-beforest-light"></i>
-                    <span class="text-beforest-light text-sm tracking-wider uppercase">Your Antidote to Urban Chaos</span>
-                </div>
-                
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-6">
-                    Escape the City.<br>
-                    <span class="text-beforest-light">Reclaim</span> Your Sanity.
-                </h1>
-                
-                <p class="text-xl text-gray-300 mb-8 max-w-lg leading-relaxed">
-                    45 minutes from Madikeri lies your sanctuary — 100 acres of pure, wild silence 
-                    where the only notification is birdsong.
-                </p>
-                
-                <!-- Stress Stats -->
-                <div class="flex items-center gap-6 mb-8 p-6 bg-white/5 rounded-xl border border-white/10">
-                    <div class="text-center">
-                        <div class="text-3xl font-light text-beforest-light">73%</div>
-                        <div class="text-xs text-gray-400">Stress Reduction</div>
+        <div class="relative z-10 min-h-screen flex items-end">
+            <div class="w-full px-8 pb-24 pt-32">
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-end">
+                    <div>
+                        <p class="text-sm uppercase tracking-widest text-white/70 mb-6">Land as Legacy</p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-light leading-none mb-8 text-balance">
+                            An asset for generations
+                        </h1>
+                        <p class="text-xl text-white/80 max-w-lg leading-relaxed">
+                            The Western Ghats have stood for millennia. Own land where your children's 
+                            children will walk among ancient forests.
+                        </p>
                     </div>
-                    <div class="h-12 w-px bg-white/20"></div>
-                    <p class="text-sm text-gray-300">
-                        Members report significant stress reduction after their first month at Hammiyala
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Lead Form -->
-            <div id="escape">
-                <div class="calm-gradient rounded-2xl p-8 border border-white/10">
-                    <div class="flex items-center gap-2 mb-2">
-                        <i data-lucide="zap" class="w-4 h-4 text-beforest-light"></i>
-                        <span class="text-beforest-light text-sm font-medium">Limited Escape Spots</span>
-                    </div>
-                    <h2 class="text-2xl font-medium mb-2">Book Your Escape Call</h2>
-                    <p class="text-gray-400 text-sm mb-6">6 founding members already escaped — spots filling fast</p>
                     
-                    <form class="space-y-5" id="escapeForm">
-                        <input type="text" placeholder="Full Name" required
-                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
-                        <input type="email" placeholder="Email Address" required
-                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
-                        <input type="tel" placeholder="Phone Number" required
-                               class="input-underline w-full px-0 py-3 text-white placeholder-gray-500">
-                        <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
-                            <option value="" disabled selected>Current City</option>
-                            <option value="bangalore">Bangalore</option>
-                            <option value="mumbai">Mumbai</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="hyderabad">Hyderabad</option>
-                            <option value="chennai">Chennai</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <select required class="input-underline w-full px-0 py-3 text-gray-500 bg-transparent">
-                            <option value="" disabled selected>Your Biggest Stressor</option>
-                            <option value="noise">Constant Noise & Traffic</option>
-                            <option value="screens">Digital Overload</option>
-                            <option value="air">Air Pollution</option>
-                            <option value="pace">Relentless Pace</option>
-                            <option value="disconnect">Disconnect from Nature</option>
-                        </select>
+                    <div id="inquiry" class="bg-black/60 p-8 lg:p-12">
+                        <p class="text-sm uppercase tracking-widest text-white/50 mb-8">Request Information</p>
                         
-                        <button type="submit" 
-                                class="w-full beforest-green-bg hover:bg-beforest-light text-white font-medium py-4 rounded-lg transition-all mt-6 flex items-center justify-center gap-2">
-                            <span>Book Your Escape Call</span>
-                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </button>
-                    </form>
+                        <form class="space-y-6" id="inquiryForm">
+                            <input type="text" placeholder="Full Name" required class="form-input">
+                            <input type="email" placeholder="Email Address" required class="form-input">
+                            <input type="tel" placeholder="Phone Number" required class="form-input">
+                            <select required class="form-input bg-transparent">
+                                <option value="" disabled selected class="text-black">Investment Timeline</option>
+                                <option value="immediate" class="text-black">Within 3 months</option>
+                                <option value="6months" class="text-black">6-12 months</option>
+                                <option value="future" class="text-black">Future consideration</option>
+                            </select>
+                            
+                            <button type="submit" class="btn-primary w-full mt-8">
+                                Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Escape Promise -->
-    <section class="py-24 bg-beforest-dark">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-4xl md:text-5xl font-light mb-6">
-                    What You'll Leave Behind.<br>
-                    <span class="text-beforest-light">What You'll Find.</span>
+    <section class="py-32 bg-white text-black">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <p class="text-sm uppercase tracking-widest text-gray-500 mb-6">Generational Wealth</p>
+                <h2 class="text-4xl md:text-5xl font-light text-balance">
+                    What you pass down matters
                 </h2>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Leave Behind -->
-                <div class="bg-red-900/20 border border-red-500/20 rounded-2xl p-8">
-                    <h3 class="text-red-400 text-lg mb-6 flex items-center gap-2">
-                        <i data-lucide="x-circle" class="w-5 h-5"></i>
-                        Leave Behind
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-gray-400">
-                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            Traffic horns at 6 AM
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-400">
-                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            47 pending notifications
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-400">
-                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            Air quality index of 180
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-400">
-                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            Sunday scrolling guilt
-                        </li>
-                        <li class="flex items-center gap-3 text-gray-400">
-                            <span class="w-2 h-2 rounded-full bg-red-500"></span>
-                            Concrete as far as you can see
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- What You'll Find -->
-                <div class="bg-beforest-green/20 border border-beforest-green/30 rounded-2xl p-8">
-                    <h3 class="text-beforest-light text-lg mb-6 flex items-center gap-2">
-                        <i data-lucide="check-circle" class="w-5 h-5"></i>
-                        Find Instead
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-white">
-                            <span class="w-2 h-2 rounded-full bg-beforest-light"></span>
-                            150+ bird species as your alarm
-                        </li>
-                        <li class="flex items-center gap-3 text-white">
-                            <span class="w-2 h-2 rounded-full bg-beforest-light"></span>
-                            Zero-electricity homes (yes, really)
-                        </li>
-                        <li class="flex items-center gap-3 text-white">
-                            <span class="w-2 h-2 rounded-full bg-beforest-light"></span>
-                            Perennial stream for morning meditation
-                        </li>
-                        <li class="flex items-center gap-3 text-white">
-                            <span class="w-2 h-2 rounded-full bg-beforest-light"></span>
-                            Forest bathing in 100 acres
-                        </li>
-                        <li class="flex items-center gap-3 text-white">
-                            <span class="w-2 h-2 rounded-full bg-beforest-light"></span>
-                            Stars you forgot existed
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Digital Detox Section -->
-    <section class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <span class="text-beforest-light text-sm tracking-wider uppercase">Digital Detox</span>
-                    <h2 class="text-4xl md:text-5xl font-light mt-4 mb-6">
-                        Homes That Don't Need<br>Electricity to Thrive
-                    </h2>
-                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                        Every home at Hammiyala is designed to use zero electricity for heating and pumping. 
-                        Instead of smart home devices, you get smart design — natural cooling, gravity-fed water, 
-                        and architecture that breathes with the forest.
+                    <img src="https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/hammiyala_page_images/ourvision.jpg" 
+                         alt="Legacy" class="w-full h-auto img-editorial">
+                </div>
+                <div>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Most assets depreciate. Land in the Western Ghats appreciates in ways 
+                        that transcend financial returns. It is a classroom for your grandchildren. 
+                        A sanctuary for your family. A contribution to the planet.
                     </p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-beforest-green/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="thermometer" class="w-5 h-5 text-beforest-light"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium mb-1">Natural Temperature Control</h4>
-                                <p class="text-sm text-gray-500">Strategic orientation and thermal mass keep homes cool</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-beforest-green/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="droplets" class="w-5 h-5 text-beforest-light"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium mb-1">Gravity-Fed Water Systems</h4>
-                                <p class="text-sm text-gray-500">Natural pressure from the hills, no pumps needed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white/5 rounded-2xl p-8 border border-white/10">
-                    <h3 class="text-2xl font-light mb-6 text-center">Your Weekly Rhythm</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-                            <span class="text-beforest-light font-medium">6:00 AM</span>
-                            <span class="text-gray-300">Wake to Malabar whistling thrushes</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-                            <span class="text-beforest-light font-medium">7:30 AM</span>
-                            <span class="text-gray-300">Coffee by your perennial stream</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-                            <span class="text-beforest-light font-medium">10:00 AM</span>
-                            <span class="text-gray-300">Forest walk (phone stays home)</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-                            <span class="text-beforest-light font-medium">4:00 PM</span>
-                            <span class="text-gray-300">Nap in the hammock (no guilt)</span>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 bg-white/5 rounded-lg">
-                            <span class="text-beforest-light font-medium">8:00 PM</span>
-                            <span class="text-gray-300">Dinner under stars you can see</span>
-                        </div>
-                    </div>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Hammiyala offers a rare convergence: a tangible asset that generates 
+                        returns while regenerating the ecosystems we depend upon.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonial -->
-    <section class="py-24 bg-beforest-forest/30">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <i data-lucide="quote" class="w-12 h-12 text-beforest-light mx-auto mb-6"></i>
-            <blockquote class="text-2xl md:text-3xl font-light leading-relaxed mb-8">
-                "I didn't realize how loud my life was until I experienced my first morning at Hammiyala. 
-                The silence wasn't empty — it was full of birds, wind, and water. I finally heard myself think."
-            </blockquote>
-            <div class="flex items-center justify-center gap-4">
-                <div class="w-12 h-12 rounded-full bg-beforest-green flex items-center justify-center text-white font-medium">
-                    R
+    <section class="py-32 bg-black">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid lg:grid-cols-3 gap-px bg-white/10">
+                <div class="bg-black p-12 text-center">
+                    <p class="text-5xl font-light text-beforest mb-4">100+</p>
+                    <p class="text-sm uppercase tracking-widest text-white/50">Acres</p>
                 </div>
-                <div class="text-left">
-                    <div class="font-medium">Rahul M.</div>
-                    <div class="text-sm text-gray-400">Tech Executive, Bangalore • Member since 2023</div>
+                <div class="bg-black p-12 text-center">
+                    <p class="text-5xl font-light text-beforest mb-4">50%</p>
+                    <p class="text-sm uppercase tracking-widest text-white/50">Preserved Forest</p>
+                </div>
+                <div class="bg-black p-12 text-center">
+                    <p class="text-5xl font-light text-beforest mb-4">10</p>
+                    <p class="text-sm uppercase tracking-widest text-white/50">Biodiversity Hotspot</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-24 bg-gradient-to-t from-beforest-dark to-black">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-light mb-6">
-                The City Will Still Be There.<br>
-                <span class="text-beforest-light">Your Sanity Might Not.</span>
+    <section class="py-32 bg-beforest-dark">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <p class="text-sm uppercase tracking-widest text-white/50 mb-8">Limited Availability</p>
+            <h2 class="text-4xl md:text-5xl font-light mb-8 text-balance">
+                The founding circle
             </h2>
-            <p class="text-xl text-gray-400 mb-8">
-                6 founding members have already made their escape. 
-                How much longer can you wait?
+            <p class="text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-12">
+                A select group of families will shape the culture and stewardship of Hammiyala 
+                for decades to come.
             </p>
-            <a href="#escape" class="beforest-green-bg hover:bg-beforest-light text-white font-medium px-8 py-4 rounded-lg transition-all inline-flex items-center gap-2">
-                <span>Book Your Escape Call</span>
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            <a href="#inquiry" class="btn-primary inline-block">
+                Inquire
             </a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-black border-t border-white/10 py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <img src="https://beforest.co/wp-content/uploads/2024/10/23-Beforest-Black-with-Tagline.png" 
-                 alt="Beforest" class="h-8 invert mx-auto mb-4">
-            <p class="text-sm text-gray-500 mb-4">
-                Creating spaces for urban souls to reconnect with what matters.
-            </p>
-            <p class="text-xs text-gray-600">&copy; 2026 Beforest. All rights reserved.</p>
+    <footer class="bg-black border-t border-white/10 py-16">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+                <div>
+                    <img src="https://beforest.co/wp-content/uploads/2024/10/24-Beforest-White-with-Tagline.png" 
+                         alt="Beforest" class="h-8 mb-4">
+                    <p class="text-white/50 text-sm">Creating sustainable permaculture food forests.</p>
+                </div>
+                <div>
+                    <p class="text-sm uppercase tracking-widest text-white/50 mb-4">Contact</p>
+                    <p class="text-white/70 text-sm">hello@beforest.co</p>
+                    <p class="text-white/70 text-sm">+91 80 4802 2333</p>
+                </div>
+            </div>
+            <div class="mt-16 pt-8 border-t border-white/10">
+                <p class="text-white/30 text-xs">© 2026 Beforest. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        lucide.createIcons();
-        
-        document.getElementById('escapeForm').addEventListener('submit', function(e) {
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
             e.preventDefault();
             this.innerHTML = `
                 <div class="text-center py-12">
-                    <div class="w-16 h-16 rounded-full bg-beforest-green flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="check" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-medium mb-2">Breathe Easy</h3>
-                    <p class="text-gray-400">We'll call you within 24 hours to plan your escape.</p>
+                    <p class="text-sm uppercase tracking-widest text-beforest mb-4">Thank You</p>
+                    <p class="text-white/70">We will be in touch shortly.</p>
                 </div>
             `;
-            lucide.createIcons();
         });
     </script>
 </body>
