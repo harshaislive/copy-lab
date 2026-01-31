@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10% Lifestyle | Content Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'ABC Arizona Flare';
+            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Light-Trial.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+        body {
+            font-family: 'ABC Arizona Flare', Georgia, serif;
+            background: #f5f5f5;
+            color: #1a1a1a;
+        }
+        .eink-card {
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+        .post-content {
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .angle-badge {
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .status-pending { background: #fff3cd; }
+        .status-published { background: #d4edda; }
+        .copy-btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .copy-btn:hover { background: #333; }
+        .stats-input {
+            border: 1px solid #ddd;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            width: 80px;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8">
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Header -->
+        <header class="mb-12">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <h1 class="text-3xl font-light mb-2">10% Lifestyle</h1>
+                    <p class="text-gray-600 text-sm">LinkedIn Content Dashboard</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-2xl font-light" id="date-display"></p>
+                    <p class="text-gray-500 text-sm">Batch: <span id="batch-id">Loading...</span></p>
+                </div>
+            </div>
+            <div class="flex gap-4 text-sm">
+                <span class="px-3 py-1 bg-yellow-100" id="pending-count">Pending: --</span>
+                <span class="px-3 py-1 bg-green-100" id="published-count">Published: --</span>
+                <span class="px-3 py-1 bg-gray-100">Total: <span id="total-count">--</span></span>
+            </div>
+        </header>
+
+        <!-- Posts Grid -->
+        <div id="posts-container" class="space-y-6">
+            <p class="text-gray-500">Loading posts...</p>
+        </div>
+
+        <!-- Instructions -->
+        <div class="mt-12 p-6 bg-white border border-gray-200">
+            <h2 class="text-lg font-normal mb-4">How to Use</h2>
+            <ol class="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+                <li>Review posts below - each card shows one LinkedIn post</li>
+                <li>Click "Copy Text" to copy the post content</li>
+                <li>Post on LinkedIn as you normally would</li>
+                <li>Paste the LinkedIn post URL in the "Post URL" field</li>
+                <li>Add stats (impressions, likes, etc.) after 24-48 hours</li>
+                <li>I track performance and improve tomorrow's batch</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <script>
+        // Load AMAL data
+        async function loadPosts() {
+            try {
+                const response = await fetch('./content/2026-01-31_amal.json');
+                const data = await response.json();
+                
+                document.getElementById('date-display').textContent = data.date;
+                document.getElementById('batch-id').textContent = data.batch_id;
+                
+                const pending = data.posts.filter(p => p.status === 'pending_review').length;
+                const published = data.posts.filter(p => p.status === 'published').length;
+                
+                document.getElementById('pending-count').textContent = `Pending: ${pending}`;
+                document.getElementById('published-count').textContent = `Published: ${published}`;
+                document.getElementById('total-count').textContent = data.posts.length;
+                
+                const container = document.getElementById('posts-container');
+                container.innerHTML = '';
+                
+                data.posts.forEach((post, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'eink-card p-6';
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="text-2xl font-light text-gray-400">${String(index + 1).padStart(2, '0')}</span>
+                                <span class="angle-badge px-2 py-1 bg-gray-100">${post.angle.replace(/_/g, ' ')}</span>
+                                <span class="angle-badge px-2 py-1 bg-gray-100">${post.format}</span>
+                            </div>
+                            <span class="text-xs px-2 py-1 ${post.status === 'published' ? 'status-published' : 'status-pending'}">
+                                ${post.status.replace(/_/g, ' ')}
+                            </span>
+                        </div>
+                        
+                        <div class="post-content text-gray-800 mb-6 text-lg">${post.content}</div>
+                        
+                        <div class="text-sm text-gray-500 mb-4">${post.hashtags.join(' ')}</div>
+                        
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                            <button onclick="copyPost('${post.id}')" class="copy-btn">Copy Text</button>
+                            
+                            <div class="flex gap-4 text-sm">
+                                <label>LinkedIn URL:
+                                    <input type="text" placeholder="Paste URL..." class="stats-input ml-2" style="width: 200px;"
+                                           value="${post.linkedin_url || ''}" onchange="updateUrl('${post.id}', this.value)">
+                                </label>
+                            </div>
+                        </div>
+                        
+                        ${post.status === 'published' ? `
+                        <div class="flex gap-4 mt-4 pt-4 border-t border-gray-100 text-sm">
+                            <label>Impressions: <input type="number" class="stats-input" value="${post.stats.impressions || ''}"></label>
+                            <label>Likes: <input type="number" class="stats-input" value="${post.stats.likes || ''}"></label>
+                            <label>Comments: <input type="number" class="stats-input" value="${post.stats.comments || ''}"></label>
+                            <label>Shares: <input type="number" class="stats-input" value="${post.stats.shares || ''}"></label>
+                        </div>
+                        ` : ''}
+                    `;
+                    container.appendChild(card);
+                });
+                
+            } catch (error) {
+                console.error('Error loading posts:', error);
+                document.getElementById('posts-container').innerHTML = 
+                    '<p class="text-red-500">Error loading posts. Check console.</p>';
+            }
+        }
+        
+        function copyPost(postId) {
+            fetch('./content/2026-01-31_amal.json')
+                .then(r => r.json())
+                .then(data => {
+                    const post = data.posts.find(p => p.id === postId);
+                    if (post) {
+                        const text = post.content + '\n\n' + post.hashtags.join(' ');
+                        navigator.clipboard.writeText(text);
+                        alert('Post copied to clipboard!');
+                    }
+                });
+        }
+        
+        function updateUrl(postId, url) {
+            // In real implementation, this would save back to the JSON file
+            console.log('Update URL for', postId, ':', url);
+        }
+        
+        loadPosts();
+    </script>
+</body>
+</html>
