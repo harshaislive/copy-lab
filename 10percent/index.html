@@ -268,11 +268,43 @@
         let currentData = null;
 
         async function discoverThreads() {
-            // Hardcoded list of available threads for now
-            // In production, this would scan the content directory
-            availableThreads = [
-                { file: '2026-01-31_posts.yaml', label: 'Jan 31, 2026 - The Permission to Rest' }
-            ];
+            // Scan for available YAML files in content directory
+            availableThreads = [];
+            
+            // Common date patterns to check
+            const checkDates = [];
+            const today = new Date();
+            
+            // Check last 7 days and next 3 days
+            for (let i = -7; i <= 3; i++) {
+                const d = new Date(today);
+                d.setDate(d.getDate() + i);
+                checkDates.push(d.toISOString().split('T')[0]);
+            }
+            
+            // Try to fetch each potential file
+            for (const dateStr of checkDates) {
+                try {
+                    const response = await fetch(`./content/${dateStr}_posts.yaml`, { method: 'HEAD' });
+                    if (response.ok) {
+                        // File exists, fetch it to get the theme
+                        const yamlResponse = await fetch(`./content/${dateStr}_posts.yaml`);
+                        const yamlText = await yamlResponse.text();
+                        const data = jsyaml.load(yamlText);
+                        
+                        availableThreads.push({
+                            file: `${dateStr}_posts.yaml`,
+                            label: `${formatDate(dateStr)} - ${data.theme}`,
+                            date: dateStr
+                        });
+                    }
+                } catch (e) {
+                    // File doesn't exist, skip
+                }
+            }
+            
+            // Sort by date (newest first)
+            availableThreads.sort((a, b) => b.date.localeCompare(a.date));
             
             const select = document.getElementById('thread-select');
             select.innerHTML = availableThreads.map(t => 
@@ -463,6 +495,12 @@
             if (score > 5) return 'High Performing';
             if (score > 2) return 'Average';
             return 'Needs Work';
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            const options = { month: 'short', day: 'numeric', year: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
         }
 
         // Initialize
