@@ -21,13 +21,67 @@
             padding: 2rem;
         }
         .container { max-width: 900px; margin: 0 auto; }
+        
+        /* Stats Header */
+        .stats-bar {
+            background: #1a1a1a;
+            color: white;
+            padding: 1.5rem 2rem;
+            margin: -2rem -2rem 2rem -2rem;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 300;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+        }
+        
         header {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e0e0e0;
         }
         h1 { font-weight: 300; font-size: 2rem; margin-bottom: 0.5rem; }
         .meta { color: #666; font-size: 0.875rem; }
+        
+        /* Thread Selector */
+        .thread-selector {
+            margin-bottom: 2rem;
+        }
+        .thread-selector label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        .thread-selector select {
+            width: 100%;
+            padding: 1rem;
+            font-family: inherit;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            background: white;
+            cursor: pointer;
+        }
+        .thread-selector select:focus {
+            outline: none;
+            border-color: #1a1a1a;
+        }
+        
         .thread-info {
             background: #f0f0f0;
             padding: 1.5rem;
@@ -36,6 +90,17 @@
         }
         .thread-info h2 { font-weight: 300; font-size: 1.25rem; margin-bottom: 0.5rem; }
         .thread-info p { color: #555; font-size: 0.875rem; }
+        .thread-info .open-questions {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+        .thread-info .open-questions li {
+            margin: 0.5rem 0;
+            color: #666;
+            font-style: italic;
+        }
+        
         .post-card {
             background: white;
             border: 1px solid #e0e0e0;
@@ -148,14 +213,50 @@
         .performance-low { color: #dc3545; }
         .loading { text-align: center; padding: 3rem; color: #666; }
         .error { text-align: center; padding: 3rem; color: #dc3545; }
+        
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .stats-bar { margin: -1rem -1rem 1.5rem -1rem; }
+            .stat-number { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
+    <div class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number" id="total-posts">0</span>
+            <span class="stat-label">Posts</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="published-posts">0</span>
+            <span class="stat-label">Published</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="pending-posts">0</span>
+            <span class="stat-label">Pending</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="total-threads">0</span>
+            <span class="stat-label">Golden Threads</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number" id="avg-engagement">0%</span>
+            <span class="stat-label">Avg Engagement</span>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <h1>10% Lifestyle</h1>
             <p class="meta">LinkedIn Content Dashboard | Golden Thread System</p>
         </header>
+
+        <div class="thread-selector">
+            <label>Select Golden Thread</label>
+            <select id="thread-select" onchange="loadSelectedThread()">
+                <option value="">Loading available threads...</option>
+            </select>
+        </div>
 
         <div id="content">
             <div class="loading">Loading posts...</div>
@@ -163,18 +264,73 @@
     </div>
 
     <script>
-        async function loadPosts() {
+        let availableThreads = [];
+        let currentData = null;
+
+        async function discoverThreads() {
+            // Hardcoded list of available threads for now
+            // In production, this would scan the content directory
+            availableThreads = [
+                { file: '2026-01-31_posts.yaml', label: 'Jan 31, 2026 - The Permission to Rest' }
+            ];
+            
+            const select = document.getElementById('thread-select');
+            select.innerHTML = availableThreads.map(t => 
+                `<option value="${t.file}">${t.label}</option>`
+            ).join('');
+            
+            document.getElementById('total-threads').textContent = availableThreads.length;
+            
+            // Load first thread by default
+            if (availableThreads.length > 0) {
+                await loadThread(availableThreads[0].file);
+            }
+        }
+
+        async function loadSelectedThread() {
+            const select = document.getElementById('thread-select');
+            const file = select.value;
+            if (file) {
+                document.getElementById('content').innerHTML = '<div class="loading">Loading posts...</div>';
+                await loadThread(file);
+            }
+        }
+
+        async function loadThread(filename) {
             try {
-                const response = await fetch('./content/2026-01-31_posts.yaml');
+                const response = await fetch(`./content/${filename}`);
                 const yamlText = await response.text();
-                const data = jsyaml.load(yamlText);
+                currentData = jsyaml.load(yamlText);
                 
-                renderDashboard(data);
+                updateStats(currentData);
+                renderDashboard(currentData);
             } catch (error) {
                 console.error('Error:', error);
                 document.getElementById('content').innerHTML = 
                     `<div class="error">Error loading posts: ${error.message}</div>`;
             }
+        }
+
+        function updateStats(data) {
+            const totalPosts = data.posts.length;
+            const publishedPosts = data.posts.filter(p => p.linkedin_url && p.linkedin_url.length > 0).length;
+            const pendingPosts = totalPosts - publishedPosts;
+            
+            // Calculate average engagement
+            const postsWithEngagement = data.posts.filter(p => p.engagement && p.engagement.impressions > 0);
+            let avgEngagement = 0;
+            if (postsWithEngagement.length > 0) {
+                const totalEngagement = postsWithEngagement.reduce((sum, p) => {
+                    const e = p.engagement;
+                    return sum + (e.likes + e.comments * 2 + e.shares * 3) / Math.max(e.impressions, 1) * 100;
+                }, 0);
+                avgEngagement = (totalEngagement / postsWithEngagement.length).toFixed(1);
+            }
+            
+            document.getElementById('total-posts').textContent = totalPosts;
+            document.getElementById('published-posts').textContent = publishedPosts;
+            document.getElementById('pending-posts').textContent = pendingPosts;
+            document.getElementById('avg-engagement').textContent = avgEngagement + '%';
         }
 
         function renderDashboard(data) {
@@ -184,7 +340,12 @@
                 <div class="thread-info">
                     <h2>${data.theme}</h2>
                     <p><strong>Golden Thread:</strong> ${data.golden_thread.narrative_arc}</p>
-                    <p style="margin-top: 0.5rem;"><strong>Open Threads:</strong> ${data.golden_thread.open_questions.join(', ')}</p>
+                    <div class="open-questions">
+                        <p style="margin-bottom: 0.5rem;"><strong>Open Questions:</strong></p>
+                        <ul>
+                            ${data.golden_thread.open_questions.map(q => `<li>${q}</li>`).join('')}
+                        </ul>
+                    </div>
                 </div>
             `;
 
@@ -258,17 +419,13 @@
         }
 
         function copyPost(postId) {
-            fetch('./content/2026-01-31_posts.yaml')
-                .then(r => r.text())
-                .then(text => {
-                    const data = jsyaml.load(text);
-                    const post = data.posts.find(p => p.id === postId);
-                    if (post) {
-                        const fullText = `${post.hook}\n\n${post.body}\n\n${post.hashtags.join(' ')}`;
-                        navigator.clipboard.writeText(fullText);
-                        alert('Post copied!');
-                    }
-                });
+            if (!currentData) return;
+            const post = currentData.posts.find(p => p.id === postId);
+            if (post) {
+                const fullText = `${post.hook}\n\n${post.body}\n\n${post.hashtags.join(' ')}`;
+                navigator.clipboard.writeText(fullText);
+                alert('Post copied!');
+            }
         }
 
         function saveLinkedInUrl(postId, url) {
@@ -283,7 +440,6 @@
 
         function calculateScore(engagement) {
             if (!engagement) return 'N/A';
-            // Simple engagement rate calculation
             const likes = engagement.likes || 0;
             const comments = engagement.comments || 0;
             const shares = engagement.shares || 0;
@@ -309,7 +465,8 @@
             return 'Needs Work';
         }
 
-        loadPosts();
+        // Initialize
+        discoverThreads();
     </script>
 </body>
 </html>
