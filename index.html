@@ -3,106 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hammiyala Collective | Beforest</title>
-    <meta name="description" content="A wilderness collective in the heart of Coorg. 100 acres of the Western Ghats.">
-    
+    <title>10% Content | Daily LinkedIn Posts</title>
     <style>
-        @font-face {
-            font-family: 'ABC Arizona Flare';
-            src: url('https://isdbyvwocudnlwzghphw.supabase.co/storage/v1/object/public/web.images/fonts/ABCArizonaFlare-Light-Trial.woff2') format('woff2');
-            font-weight: 300;
-            font-style: normal;
-            font-display: swap;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 1rem;
         }
-    </style>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'beforest': '#6b9e45',
-                        'beforest-dark': '#344736',
-                    },
-                    fontFamily: {
-                        'editorial': ['"ABC Arizona Flare"', 'Georgia', 'serif'],
-                    }
-                }
-            }
+        .header {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
         }
-    </script>
-    
-    <style>
-        body { 
-            font-family: 'ABC Arizona Flare', Georgia, serif; 
-            font-weight: 300;
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
-        .img-editorial {
-            filter: contrast(0.95) saturate(0.9);
+        .header p {
+            color: #666;
+            font-size: 0.875rem;
+        }
+        .post {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        .post-number {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+        .hook {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .body {
+            white-space: pre-wrap;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .hashtags {
+            color: #0066cc;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            width: 100%;
         }
     </style>
 </head>
-<body class="bg-black text-white min-h-screen">
-    
-    <div class="min-h-screen flex flex-col">
-        <div class="flex-1 flex items-center justify-center p-8">
-            <div class="max-w-4xl w-full">
-                
-                <div class="text-center mb-16">
-                    <img src="https://beforest.co/wp-content/uploads/2024/10/24-Beforest-White-with-Tagline.png" 
-                         alt="Beforest" class="h-12 mx-auto mb-8">
-                    <p class="text-sm uppercase tracking-widest text-white/50 mb-4">Landing Page Variants</p>
-                    <h1 class="text-4xl md:text-5xl font-light mb-6">Hammiyala Collective</h1>
-                    <p class="text-white/60 max-w-xl mx-auto">
-                        Five editorial approaches to the same offering. 
-                        Each designed for high-net-worth individuals.
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
-                    <a href="./v1/" class="bg-black p-8 hover:bg-white/5 transition block">
-                        <p class="text-sm text-white/40 mb-2">01</p>
-                        <h2 class="text-xl font-normal mb-2">The Collective</h2>
-                        <p class="text-sm text-white/50">Complete overview with full imagery</p>
-                    </a>
-                    <a href="./v2/" class="bg-black p-8 hover:bg-white/5 transition block">
-                        <p class="text-sm text-white/40 mb-2">02</p>
-                        <h2 class="text-xl font-normal mb-2">Land as Legacy</h2>
-                        <p class="text-sm text-white/50">Generational wealth positioning</p>
-                    </a>
-                    <a href="./v3/" class="bg-black p-8 hover:bg-white/5 transition block">
-                        <p class="text-sm text-white/40 mb-2">03</p>
-                        <h2 class="text-xl font-normal mb-2">Conscious Investment</h2>
-                        <p class="text-sm text-white/50">ESG and 4Returns framework</p>
-                    </a>
-                    <a href="./v4/" class="bg-black p-8 hover:bg-white/5 transition block">
-                        <p class="text-sm text-white/40 mb-2">04</p>
-                        <h2 class="text-xl font-normal mb-2">Intentional Community</h2>
-                        <p class="text-sm text-white/50">Shared stewardship focus</p>
-                    </a>
-                    <a href="./v5/" class="bg-black p-8 hover:bg-white/5 transition block">
-                        <p class="text-sm text-white/40 mb-2">05</p>
-                        <h2 class="text-xl font-normal mb-2">Wilderness Living</h2>
-                        <p class="text-sm text-white/50">Biodiversity and wildlife</p>
-                    </a>
-                    <a href="https://beforest.co/co-forest/" target="_blank" class="bg-black p-8 hover:bg-white/5 transition block">
-                        <p class="text-sm text-white/40 mb-2">00</p>
-                        <h2 class="text-xl font-normal mb-2">Original Site</h2>
-                        <p class="text-sm text-white/50">Reference comparison</p>
-                    </a>
-                </div>
-                
-                <div class="mt-16 text-center">
-                    <p class="text-xs text-white/30 uppercase tracking-widest">
-                        Editorial Design System • No Emojis • No Glass Morphism • Premium Aesthetic
-                    </p>
-                </div>
-                
-            </div>
-        </div>
+<body>
+    <div class="header">
+        <h1>10% Content</h1>
+        <p>Daily LinkedIn Posts - Jan 31, 2026</p>
     </div>
     
+    <div class="post">
+        <div class="post-number">01</div>
+        <div class="hook">You know that tired feeling that sleep doesn't fix?</div>
+        <div class="body">You get 8 hours. Maybe 9 on weekends.
+
+But there's this background hum that never quite goes away.
+
+It's not your fault.
+
+Your nervous system was designed for environments where stillness was the default, not the exception.
+
+Now? Your brain processes 34 gigabytes of information daily.
+
+What's the last thing you heard that wasn't man-made?</div>
+        <div class="hashtags">#Rest #Burnout #NatureDeficit</div>
+        <button class="btn" onclick="copyPost(this)">Copy Post</button>
+    </div>
+
+    <div class="post">
+        <div class="post-number">02</div>
+        <div class="hook">Your ancestors would be confused by your weekends.</div>
+        <div class="body">Not judgmental. Just... confused.
+
+They spent 200,000 years figuring out:
+- Which plants heal
+- Which birds mean rain
+- Which silence means safety
+
+And now?
+
+We spend Saturdays recovering from the week.
+Sundays dreading the next one.
+
+The weird part: we call this "balance."
+
+What do you do on weekends that actually fills you back up?</div>
+        <div class="hashtags">#Weekend #Nature #SlowLiving</div>
+        <button class="btn" onclick="copyPost(this)">Copy Post</button>
+    </div>
+
+    <script>
+        function copyPost(btn) {
+            const post = btn.parentElement;
+            const hook = post.querySelector('.hook').textContent;
+            const body = post.querySelector('.body').textContent;
+            const hashtags = post.querySelector('.hashtags').textContent;
+            const text = hook + '\n\n' + body + '\n\n' + hashtags;
+            navigator.clipboard.writeText(text);
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy Post', 2000);
+        }
+    </script>
 </body>
 </html>
