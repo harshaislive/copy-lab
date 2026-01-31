@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10% Content | Daily LinkedIn Posts</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fafafa;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 1rem;
+        }
+        .header {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            color: #666;
+            font-size: 0.875rem;
+        }
+        .post {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+        .post-number {
+            font-size: 0.75rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+        .hook {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .body {
+            white-space: pre-wrap;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .hashtags {
+            color: #0066cc;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>10% Content</h1>
+        <p>Daily LinkedIn Posts - Jan 31, 2026</p>
+    </div>
+    
+    <div class="post">
+        <div class="post-number">01</div>
+        <div class="hook">You know that tired feeling that sleep doesn't fix?</div>
+        <div class="body">You get 8 hours. Maybe 9 on weekends.
+
+But there's this background hum that never quite goes away.
+
+It's not your fault.
+
+Your nervous system was designed for environments where stillness was the default, not the exception.
+
+Now? Your brain processes 34 gigabytes of information daily.
+
+What's the last thing you heard that wasn't man-made?</div>
+        <div class="hashtags">#Rest #Burnout #NatureDeficit</div>
+        <button class="btn" onclick="copyPost(this)">Copy Post</button>
+    </div>
+
+    <div class="post">
+        <div class="post-number">02</div>
+        <div class="hook">Your ancestors would be confused by your weekends.</div>
+        <div class="body">Not judgmental. Just... confused.
+
+They spent 200,000 years figuring out:
+- Which plants heal
+- Which birds mean rain
+- Which silence means safety
+
+And now?
+
+We spend Saturdays recovering from the week.
+Sundays dreading the next one.
+
+The weird part: we call this "balance."
+
+What do you do on weekends that actually fills you back up?</div>
+        <div class="hashtags">#Weekend #Nature #SlowLiving</div>
+        <button class="btn" onclick="copyPost(this)">Copy Post</button>
+    </div>
+
+    <script>
+        function copyPost(btn) {
+            const post = btn.parentElement;
+            const hook = post.querySelector('.hook').textContent;
+            const body = post.querySelector('.body').textContent;
+            const hashtags = post.querySelector('.hashtags').textContent;
+            const text = hook + '\n\n' + body + '\n\n' + hashtags;
+            navigator.clipboard.writeText(text);
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy Post', 2000);
+        }
+    </script>
+</body>
+</html>
