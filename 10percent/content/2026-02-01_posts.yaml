@@ -1,194 +1,278 @@
-batch_id: tofu_20260201
-date: '2026-02-01'
-funnel_stage: top
-posts:
-- angle: nature_prescription
-  body: What are your thoughts on this?
-  hashtags:
-  - '#Rest'
-  - '#Burnout'
-  - '#NatureDeficit'
-  hook: Rewilding isn't just for wolves.
-  id: '20260201_001'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: rest_deficit
-  body: What are your thoughts on this?
-  hashtags:
-  - '#Weekend'
-  - '#Nature'
-  - '#SlowLiving'
-  hook: Your ancestors would be confused by your weekends.
-  id: '20260201_002'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: attention_economy
-  body: What are your thoughts on this?
-  hashtags:
-  - '#DigitalDetox'
-  - '#Mindfulness'
-  - '#Presence'
-  hook: We built machines to save time. Now we check them 96 times a day.
-  id: '20260201_003'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: psychological_stress
-  body: 'You get 8 hours. Maybe 9 on weekends.
-
-
-    But there''s this background hum that never quite goes away.
-
-
-    It''s not your fault.
-
-
-    Your nervous system was designed for environments where stillness was the default,
-    not the exception.
-
-
-    Now? Your brain processes 34 gigabytes of information daily.
-
-
-    What''s the last thing you heard that wasn''t man-made?'
-  hashtags:
-  - '#SensoryOverload'
-  - '#Silence'
-  - '#MentalHealth'
-  hook: Your attention is the most valuable thing you own.
-  id: '20260201_004'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: rewilding_self
-  body: What are your thoughts on this?
-  hashtags:
-  - '#Stress'
-  - '#BurnoutRecovery'
-  - '#Wellness'
-  hook: The weird thing about 'balance' is...
-  id: '20260201_005'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: modern_paradox
-  body: 'The average person touches their phone 96 times daily.
-
-
-    That''s every 10 minutes of waking life.
-
-
-    We invented washing machines to save 6 hours a week. Then filled that time with
-    scrolling.
-
-
-    The brain needs boredom to process. Silence to consolidate memories.
-
-
-    What would happen if you just... didn''t? For an hour. A day.
-
-
-    What are you afraid you''d feel?'
-  hashtags:
-  - '#NatureRx'
-  - '#ForestBathing'
-  - '#Healing'
-  hook: Your body thinks it's being chased by a lion. It's actually just email.
-  id: '20260201_006'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: sensory_overload
-  body: 'Even in the quietest room you''ve been in: the hum of electricity, distant
-    traffic, your own blood in your ears.
-
-
-    True silence is extinct in cities.
-
-
-    Your eyes never see real darkness. Real distance. Anything that moves slowly.
-
-
-    We''re running an experiment: Take animals designed for one environment. Put them
-    in another.
-
-
-    The results are in.
-
-
-    When did you last feel truly... quiet?'
-  hashtags:
-  - '#SlowLiving'
-  - '#Generations'
-  - '#Simplicity'
-  hook: You know that tired feeling that sleep doesn't fix?
-  id: '20260201_007'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: nature_connection
-  body: 'They spent 200,000 years figuring out which plants heal, which birds mean
-    rain, which silence means safety.
-
-
-    And now?
-
-
-    We spend Saturdays recovering from the week. Sundays dreading the next one.
-
-
-    The body remembers what the mind forgets.
-
-
-    What do you do on weekends that actually fills you back up?'
-  hashtags:
-  - '#Attention'
-  - '#DigitalWellness'
-  - '#IntentionalLiving'
-  hook: Your ears have never heard actual silence.
-  id: '20260201_008'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: generational_shift
-  body: What are your thoughts on this?
-  hashtags:
-  - '#Rewilding'
-  - '#Reclamation'
-  - '#AuthenticLiving'
-  hook: Your grandparents' stress relief was the front porch.
-  id: '20260201_009'
-  linkedin_url: null
-  stats: {}
-  status: pending
-- angle: biological_mismatch
-  body: What are your thoughts on this?
-  hashtags:
-  - '#Permission'
-  - '#Rest'
-  - '#Choice'
-  hook: Doctors in Scotland can now prescribe nature.
-  id: '20260201_010'
-  linkedin_url: null
-  stats: {}
-  status: pending
+theme: "The Silence We Forgot"
 golden_thread:
-  narrative_arc: Your nervous system was designed for environments where stillness was the default,
-    not the exception. Modern life is a sensory assault. 10% time in nature resets the system.
+  narrative_arc: "Your nervous system was designed for stillness. Modern life is sensory assault. 10% time in nature resets the system."
   open_questions:
-  - What would happen if you didn't check your phone for an hour?
-  - When did you last feel truly quiet?
-  - What are you afraid you'd feel in silence?
-  psychological_hooks:
-  - biological_mismatch: Your body thinks it's being chased by a lion
-  - sensory_overload: True silence is extinct in cities
-  - rest_deficit: That tired feeling sleep doesn't fix
-  - attention_economy: Your attention is the most valuable thing you own
-summary:
-  pending: 10
-  published: 0
-  total_posts: 10
-theme: The silence we forgot
-tone: conversational
+    - "What would happen if you didn't check your phone for an hour?"
+    - "When did you last feel truly quiet?"
+    - "What are you afraid you'd feel in silence?"
+
+tone_profile:
+  conversational: 85
+  confrontational: 20
+  poetic: 50
+  actionable: 40
+
+posts:
+  - id: "post_01"
+    position: 1
+    angle: "nature_prescription"
+    hook: "Rewilding isn't just for wolves."
+    body: |
+      Doctors in Scotland can now prescribe nature.
+
+      Not as a nice-to-have. As medicine.
+
+      Because they've measured what happens when humans stop:
+      - The cortisol drop
+      - The attention restoration
+      - The nervous system remembering what 'off' feels like
+
+      We're not built for constant stimulation.
+      We're built for rhythms:
+      - Light and dark
+      - Activity and rest
+      - Connection and solitude
+
+      What would 10% of your week look like if you treated it as essential?
+    hashtags: ["#Rest", "#Burnout", "#NatureDeficit"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_02"
+    position: 2
+    angle: "rest_deficit"
+    hook: "Your ancestors would be confused by your weekends."
+    body: |
+      Not judgmental. Just... confused.
+
+      They spent 200,000 years figuring out which plants heal, which birds mean rain, which silence means safety.
+
+      And now?
+
+      We spend Saturdays recovering from the week. Sundays dreading the next one.
+
+      The weird part: we call this "balance."
+
+      What do you do on weekends that actually fills you back up?
+    hashtags: ["#Weekend", "#Nature", "#SlowLiving"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_03"
+    position: 3
+    angle: "attention_economy"
+    hook: "We built machines to save time. Now we check them 96 times a day."
+    body: |
+      That's once every 10 minutes of being awake.
+
+      Here's what I noticed:
+
+      When I spend a weekend somewhere without signal, that number drops to about 6.
+
+      Not because I'm disciplined.
+      Because the option literally doesn't exist.
+
+      That's the trick, isn't it?
+
+      We don't need more willpower.
+      We need different environments.
+
+      When's the last time you were somewhere you *couldn't* check your phone?
+    hashtags: ["#DigitalDetox", "#Mindfulness", "#Presence"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_04"
+    position: 4
+    angle: "psychological_stress"
+    hook: "Your attention is the most valuable thing you own."
+    body: |
+      You get 8 hours. Maybe 9 on weekends.
+
+      But there's this background hum that never quite goes away.
+
+      It's not your fault.
+
+      Your nervous system was designed for environments where stillness was the default, not the exception.
+
+      Now? Your brain processes 34 gigabytes of information daily.
+
+      What's the last thing you heard that wasn't man-made?
+    hashtags: ["#SensoryOverload", "#Silence", "#MentalHealth"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_05"
+    position: 5
+    angle: "rewilding_self"
+    hook: "The weird thing about 'balance' is..."
+    body: |
+      We treat it like a scale.
+      Work on one side. Life on the other.
+
+      But what if it's not about balance?
+      What if it's about biology?
+
+      Your body doesn't know from "work-life balance."
+      It knows:
+      - Stress hormones
+      - Natural light
+      - Movement
+      - Silence
+
+      You can't negotiate with your nervous system.
+      You can only feed it what it needs.
+
+      What's one thing your body is asking for that you've been ignoring?
+    hashtags: ["#Stress", "#BurnoutRecovery", "#Wellness"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_06"
+    position: 6
+    angle: "modern_paradox"
+    hook: "Your body thinks it's being chased by a lion. It's actually just email."
+    body: |
+      The average person touches their phone 96 times daily.
+
+      That's every 10 minutes of waking life.
+
+      We invented washing machines to save 6 hours a week. Then filled that time with scrolling.
+
+      The brain needs boredom to process. Silence to consolidate memories.
+
+      What would happen if you just... didn't? For an hour. A day.
+
+      What are you afraid you'd feel?
+    hashtags: ["#NatureRx", "#ForestBathing", "#Healing"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_07"
+    position: 7
+    angle: "sensory_overload"
+    hook: "You know that tired feeling that sleep doesn't fix?"
+    body: |
+      Even in the quietest room you've been in: the hum of electricity, distant traffic, your own blood in your ears.
+
+      True silence is extinct in cities.
+
+      Your eyes never see real darkness. Real distance. Anything that moves slowly.
+
+      We're running an experiment: Take animals designed for one environment. Put them in another.
+
+      The results are in.
+
+      When did you last feel truly... quiet?
+    hashtags: ["#SlowLiving", "#Generations", "#Simplicity"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_08"
+    position: 8
+    angle: "nature_connection"
+    hook: "Your ears have never heard actual silence."
+    body: |
+      They spent 200,000 years figuring out which plants heal, which birds mean rain, which silence means safety.
+
+      And now?
+
+      We spend Saturdays recovering from the week. Sundays dreading the next one.
+
+      The body remembers what the mind forgets.
+
+      What do you do on weekends that actually fills you back up?
+    hashtags: ["#Attention", "#DigitalWellness", "#IntentionalLiving"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_09"
+    position: 9
+    angle: "generational_shift"
+    hook: "Your grandparents' stress relief was the front porch."
+    body: |
+      Not an app.
+      Not a subscription.
+      Just... sitting.
+
+      Watching light change.
+      Hearing birds without naming them.
+      Being bored without reaching for a screen.
+
+      We've gained so much technology.
+      We've lost so much silence.
+
+      What would your grandmother tell you about rest?
+    hashtags: ["#Rewilding", "#Reclamation", "#AuthenticLiving"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
+
+  - id: "post_10"
+    position: 10
+    angle: "biological_mismatch"
+    hook: "Doctors in Scotland can now prescribe nature."
+    body: |
+      Not metaphorically. Literally.
+
+      Because we've finally measured what our bodies knew:
+      - 20 minutes in nature lowers cortisol
+      - 2 hours weekly improves mental health
+      - Regular exposure prevents burnout better than vacation
+
+      It's not about being "outdoorsy."
+      It's about being human.
+
+      What's your 10% this week?
+    hashtags: ["#Permission", "#Rest", "#Choice"]
+    linkedin_url: ""
+    engagement:
+      impressions: 0
+      likes: 0
+      comments: 0
+      shares: 0
+      click_throughs: 0
