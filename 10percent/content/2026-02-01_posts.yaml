@@ -1,40 +1,37 @@
-theme: "The Silence We Forgot"
+theme: "Digital Minimalism"
 golden_thread:
-  narrative_arc: "Your nervous system was designed for stillness. Modern life is sensory assault. 10% time in nature resets the system."
+  narrative_arc: "We traded presence for productivity. The 10% lifestyle is about reclaiming attention in a distracted world."
   open_questions:
-    - "What would happen if you didn't check your phone for an hour?"
-    - "When did you last feel truly quiet?"
-    - "What are you afraid you'd feel in silence?"
+    - "What would you create if you weren't consuming?"
+    - "How much of your day is reactive vs intentional?"
+    - "What are you saying no to when you say yes to scroll?"
 
 tone_profile:
-  conversational: 85
-  confrontational: 20
-  poetic: 50
-  actionable: 40
+  conversational: 80
+  confrontational: 30
+  poetic: 45
+  actionable: 65
 
 posts:
   - id: "post_01"
     position: 1
-    angle: "nature_prescription"
-    hook: "Rewilding isn't just for wolves."
+    angle: "attention_reclamation"
+    hook: "Your focus is being auctioned to the highest bidder."
     body: |
-      Doctors in Scotland can now prescribe nature.
+      Every app on your phone is designed to capture and keep your attention.
 
-      Not as a nice-to-have. As medicine.
+      Not because they care about you.
+      Because attention is the currency of the digital economy.
 
-      Because they've measured what happens when humans stop:
-      - The cortisol drop
-      - The attention restoration
-      - The nervous system remembering what 'off' feels like
+      The average person:
+      - Checks phone 96 times daily
+      - Spends 2.5 hours on social media
+      - Switches apps 89 times per day
 
-      We're not built for constant stimulation.
-      We're built for rhythms:
-      - Light and dark
-      - Activity and rest
-      - Connection and solitude
+      That's not usage. That's extraction.
 
-      What would 10% of your week look like if you treated it as essential?
-    hashtags: ["#Rest", "#Burnout", "#NatureDeficit"]
+      What would your life look like if you reclaimed just 10% of that time?
+    hashtags: ["#DigitalMinimalism", "#Attention", "#IntentionalLiving"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -45,21 +42,22 @@ posts:
 
   - id: "post_02"
     position: 2
-    angle: "rest_deficit"
-    hook: "Your ancestors would be confused by your weekends."
+    angle: "notification_anxiety"
+    hook: "The red dot is not your friend."
     body: |
-      Not judgmental. Just... confused.
+      That little badge number creates a psychological itch.
 
-      They spent 200,000 years figuring out which plants heal, which birds mean rain, which silence means safety.
+      It doesn't matter what's behind it.
+      What matters is that you don't know.
 
-      And now?
+      This is called "variable reward" — the same mechanism that makes slot machines addictive.
 
-      We spend Saturdays recovering from the week. Sundays dreading the next one.
+      Try this: Turn off all badge notifications for one day.
 
-      The weird part: we call this "balance."
+      Not the apps. Just the red dots.
 
-      What do you do on weekends that actually fills you back up?
-    hashtags: ["#Weekend", "#Nature", "#SlowLiving"]
+      Notice what happens to your anxiety levels.
+    hashtags: ["#DigitalWellness", "#Mindfulness", "#MentalHealth"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -70,25 +68,26 @@ posts:
 
   - id: "post_03"
     position: 3
-    angle: "attention_economy"
-    hook: "We built machines to save time. Now we check them 96 times a day."
+    angle: "creation_vs_consumption"
+    hook: "You're either the creator or the product."
     body: |
-      That's once every 10 minutes of being awake.
+      Social platforms don't sell connections.
+      They sell your attention to advertisers.
 
-      Here's what I noticed:
+      The more you consume, the more valuable you become.
 
-      When I spend a weekend somewhere without signal, that number drops to about 6.
+      But there's a flip side:
 
-      Not because I'm disciplined.
-      Because the option literally doesn't exist.
+      When you create instead of consume, you break the cycle.
+      - Write instead of scroll
+      - Build instead of browse
+      - Connect instead of compare
 
-      That's the trick, isn't it?
+      The 10% lifestyle isn't about deprivation.
+      It's about choosing what you feed your mind.
 
-      We don't need more willpower.
-      We need different environments.
-
-      When's the last time you were somewhere you *couldn't* check your phone?
-    hashtags: ["#DigitalDetox", "#Mindfulness", "#Presence"]
+      What did you create today?
+    hashtags: ["#CreatorEconomy", "#DigitalDetox", "#Productivity"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -99,21 +98,25 @@ posts:
 
   - id: "post_04"
     position: 4
-    angle: "psychological_stress"
-    hook: "Your attention is the most valuable thing you own."
+    angle: "deep_work"
+    hook: "Distraction costs more than you think."
     body: |
-      You get 8 hours. Maybe 9 on weekends.
+      It takes 23 minutes to return to deep focus after an interruption.
 
-      But there's this background hum that never quite goes away.
+      Not the task. The focus.
 
-      It's not your fault.
+      Check your phone 10 times = 230 minutes of lost concentration.
+      That's 4 hours of your workday.
 
-      Your nervous system was designed for environments where stillness was the default, not the exception.
+      The solution isn't willpower.
+      It's environment design:
+      - Phone in another room
+      - Notifications off
+      - Specific times for checking
 
-      Now? Your brain processes 34 gigabytes of information daily.
-
-      What's the last thing you heard that wasn't man-made?
-    hashtags: ["#SensoryOverload", "#Silence", "#MentalHealth"]
+      Your best work happens in uninterrupted blocks.
+      Protect them like meetings with your most important client: yourself.
+    hashtags: ["#DeepWork", "#Focus", "#Productivity"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -124,27 +127,25 @@ posts:
 
   - id: "post_05"
     position: 5
-    angle: "rewilding_self"
-    hook: "The weird thing about 'balance' is..."
+    angle: "social_comparison"
+    hook: "You're comparing your behind-the-scenes to everyone else's highlight reel."
     body: |
-      We treat it like a scale.
-      Work on one side. Life on the other.
+      The problem with social media isn't the time it takes.
+      It's the story it tells.
 
-      But what if it's not about balance?
-      What if it's about biology?
+      Everyone's launching, succeeding, living their best life.
+      While you're... sitting in traffic. Again.
 
-      Your body doesn't know from "work-life balance."
-      It knows:
-      - Stress hormones
-      - Natural light
-      - Movement
-      - Silence
+      What you don't see:
+      - The failures
+      - The doubts
+      - The ordinary Tuesdays
 
-      You can't negotiate with your nervous system.
-      You can only feed it what it needs.
+      Comparison is automatic.
+      Contentment is intentional.
 
-      What's one thing your body is asking for that you've been ignoring?
-    hashtags: ["#Stress", "#BurnoutRecovery", "#Wellness"]
+      What if you took a week off from watching other people's lives?
+    hashtags: ["#Comparison", "#MentalHealth", "#Authenticity"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -155,21 +156,29 @@ posts:
 
   - id: "post_06"
     position: 6
-    angle: "modern_paradox"
-    hook: "Your body thinks it's being chased by a lion. It's actually just email."
+    angle: "boredom_benefits"
+    hook: "Your brain needs boredom to be brilliant."
     body: |
-      The average person touches their phone 96 times daily.
+      When was the last time you were truly bored?
 
-      That's every 10 minutes of waking life.
+      Not frustrated. Not tired.
+      Bored.
 
-      We invented washing machines to save 6 hours a week. Then filled that time with scrolling.
+      Here's what happens in boredom:
+      - Your mind wanders
+      - Connections form
+      - Creativity sparks
+      - Memories consolidate
 
-      The brain needs boredom to process. Silence to consolidate memories.
+      Every time you reach for your phone, you're stealing from your future ideas.
 
-      What would happen if you just... didn't? For an hour. A day.
+      Try scheduled boredom:
+      - Walk without podcasts
+      - Eat without screens
+      - Wait without scrolling
 
-      What are you afraid you'd feel?
-    hashtags: ["#NatureRx", "#ForestBathing", "#Healing"]
+      Your next breakthrough might be hiding in the silence you're avoiding.
+    hashtags: ["#Creativity", "#Boredom", "#Mindfulness"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -180,21 +189,29 @@ posts:
 
   - id: "post_07"
     position: 7
-    angle: "sensory_overload"
-    hook: "You know that tired feeling that sleep doesn't fix?"
+    angle: "weekend_recovery"
+    hook: "Monday morning isn't a reset. It's a reckoning."
     body: |
-      Even in the quietest room you've been in: the hum of electricity, distant traffic, your own blood in your ears.
+      You know the pattern:
 
-      True silence is extinct in cities.
+      Exhausted by Friday.
+      Recover Saturday.
+      Anxious Sunday evening.
+      Repeat.
 
-      Your eyes never see real darkness. Real distance. Anything that moves slowly.
+      We treat weekends like recovery from work.
+      But what if work didn't require recovery?
 
-      We're running an experiment: Take animals designed for one environment. Put them in another.
+      The 10% lifestyle isn't about weekends.
+      It's about designing a life that doesn't deplete you.
 
-      The results are in.
+      Small changes compound:
+      - One screen-free hour daily
+      - Nature exposure weekly
+      - Real connection regularly
 
-      When did you last feel truly... quiet?
-    hashtags: ["#SlowLiving", "#Generations", "#Simplicity"]
+      What would sustainable look like for you?
+    hashtags: ["#WorkLifeBalance", "#BurnoutPrevention", "#Wellness"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -205,19 +222,26 @@ posts:
 
   - id: "post_08"
     position: 8
-    angle: "nature_connection"
-    hook: "Your ears have never heard actual silence."
+    angle: "digital_boundaries"
+    hook: "Your phone has no boundaries. You must create them."
     body: |
-      They spent 200,000 years figuring out which plants heal, which birds mean rain, which silence means safety.
+      Apps are designed to be infinitely engaging.
+      They have no stopping cues.
 
-      And now?
+      Remember when TV shows ended? When albums had sides?
 
-      We spend Saturdays recovering from the week. Sundays dreading the next one.
+      Infinite scroll removed the natural break.
 
-      The body remembers what the mind forgets.
+      Your boundaries must be intentional:
+      - App time limits
+      - Phone-free zones (bedroom, dinner table)
+      - Digital sunset (no screens after 9pm)
 
-      What do you do on weekends that actually fills you back up?
-    hashtags: ["#Attention", "#DigitalWellness", "#IntentionalLiving"]
+      It feels restrictive at first.
+      Then liberating.
+
+      What boundary would most improve your life?
+    hashtags: ["#Boundaries", "#DigitalWellness", "#Habits"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -228,22 +252,29 @@ posts:
 
   - id: "post_09"
     position: 9
-    angle: "generational_shift"
-    hook: "Your grandparents' stress relief was the front porch."
+    angle: "presence_practice"
+    hook: "You're missing your life while documenting it."
     body: |
-      Not an app.
-      Not a subscription.
-      Just... sitting.
+      We used to experience moments.
+      Now we curate them.
 
-      Watching light change.
-      Hearing birds without naming them.
-      Being bored without reaching for a screen.
+      The sunset.
+      The conversation.
+      The ordinary magic.
 
-      We've gained so much technology.
-      We've lost so much silence.
+      All filtered through: "Is this shareable?"
 
-      What would your grandmother tell you about rest?
-    hashtags: ["#Rewilding", "#Reclamation", "#AuthenticLiving"]
+      Try this experiment:
+      One day without posting.
+      Without checking likes.
+      Without the performance.
+
+      Just: Be where you are.
+      With who you're with.
+      Doing what you're doing.
+
+      The 10% lifestyle starts with being present for your own life.
+    hashtags: ["#Presence", "#Mindfulness", "#IntentionalLiving"]
     linkedin_url: ""
     engagement:
       impressions: 0
@@ -254,21 +285,28 @@ posts:
 
   - id: "post_10"
     position: 10
-    angle: "biological_mismatch"
-    hook: "Doctors in Scotland can now prescribe nature."
+    angle: "digital_declaration"
+    hook: "This is not a digital detox. It's a digital declaration."
     body: |
-      Not metaphorically. Literally.
+      I'm not leaving technology.
+      I'm choosing it.
 
-      Because we've finally measured what our bodies knew:
-      - 20 minutes in nature lowers cortisol
-      - 2 hours weekly improves mental health
-      - Regular exposure prevents burnout better than vacation
+      Intentionally.
+      On my terms.
+      For my purposes.
 
-      It's not about being "outdoorsy."
-      It's about being human.
+      The 10% lifestyle:
+      - Technology serves me, not the reverse
+      - My attention is mine to allocate
+      - Boredom is a feature, not a bug
+      - Creation beats consumption
+      - Presence beats performance
 
-      What's your 10% this week?
-    hashtags: ["#Permission", "#Rest", "#Choice"]
+      This isn't about going back.
+      It's about going forward — with awareness.
+
+      What's your 10% declaration?
+    hashtags: ["#DigitalMinimalism", "#10PercentLifestyle", "#IntentionalLiving"]
     linkedin_url: ""
     engagement:
       impressions: 0
